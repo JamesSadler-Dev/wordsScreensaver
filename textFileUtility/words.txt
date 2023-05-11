@@ -1,0 +1,408 @@
+Scrapy
+Wireshark
+Typer
+Typehints
+Type Annotation
+Mypy
+Command Line Arguments
+Rust
+I32
+Fn Myfun()
+Main()
+Lambda
+Flex-Wrap
+Flex-Shrink
+Flex-Grow
+Element
+Prepend
+Prepend Element
+Requests
+Beautifulsoup
+Node Abstract Baseclass
+Css Selectors
+Implement
+Document
+Innerhtml
+Append Innerhtml
+Complement
+Flask
+Instantiate Flask + Typer
+@App.Command
+Def Myclicommand(Arg1:Int):
+Decorator Pattern
+Webapp
+Controller
+View
+Route
+Post/Get
+Methods
+Forms
+Inputs
+Select
+Option
+Name Attribute
+Required
+Multiple Element Selector
+Autocomplete Attribute
+Autofocus Attribute
+Pseudoclasses
+Attribute Selector
+Id Selector
+Direct Descendant Selector
+All Descendant Selector
+Viewport
+Media Queries
+Responsive Design
+@Media (Min/Max-Width){
+Rems
+Ems
+% Measurement
+Device Width
+Screen Orientation
+Class Selector
+Code Generation
+Race Condition
+Async
+Interpreter Ticks
+Signals
+Gil
+Locks
+Synchronization Techniques
+Transactions
+Relational Db
+Non-Relational
+Sqlite
+Insert Into
+Values(?)
+Columns
+Rows
+Language Constructs
+Subquery
+Join This On This.Id = Other.This_Id;
+Update Tablename Set
+Where Clause
+Drop Table Mytable;
+Delete From Mytable;
+Matching Sql
+Wildcard
+Distinct()
+Avg
+Min
+Max
+Count
+Alter Table Tablename
+"In" Sql
+Primary Key
+Foreign Key
+Primary Key(Id)
+Foreign Key This.Otherid References Other.Id;
+.Schema
+.Help
+.Import
+Find Command
+-Name
+-Iname
+-Ctime
+-Type
+-Size
+-Exec
+Locate Command
+Updatedb
+App.Run(Debug=True)
+Flask Mail
+Flask Session
+App.Config
+@App.Route("/")
+Methods=["Post" "Get"]
+Render_Template
+Request.Args.Get()
+Request.Forms.Get()
+((Random.Int)%Maxvalue)+Min
+Import Sqlite3
+Conn = Sqlite3.Connect()
+C = Conn.Cursor()
+C.Execute("Insert Into")
+C.Executemany(Queries)
+Conn.Rowfactory = Sqlite3.Row
+C.Fetch() Executed Query
+Fetchmany
+C.Fetchall
+"Use Strict"
+Setinterval()
+Settimeout()
+Borrow Checker
+Semantic Elements
+Screen Readers
+Pseudoelement Selector
+Cascade Css
+Css Specificity
+Factoring Out Commonalities
+Separation Of Concerns
+Clientside
+Serverside
+Javascript Frontend
+Controllers Backend
+Mvc Model View Controller
+Business Logic
+Api
+Web Services
+Graph Theory
+Edges
+Combinatorial
+Time Complexity
+Polynomial
+Big O
+Theoretical Efficiency
+Sequential
+Flow Of Control
+Arraylist
+Linkedlist
+List Interface
+First Class Functions
+Functional Programming
+Closures
+Hidden Outer Variable
+Granular Control Oop
+Access Modifiers
+Arrow Functions
+Document Object Model
+Max Identifier Length
+Case Conventions
+Pascal Case
+Kebab-Case
+Camelcase
+Exponential Runtime
+Nested For Loop
+Labelled Break
+Fallthrough
+Window Alert
+Console.Log()
+New Date()
+Tolocalestring()
+Reference Types
+Wrapper Class
+Document.Queryselector()
+Queryselectorall()
+Heterogenous Containers
+Homogenous Containers
+Parseint
+Parsefloat
+Formatting Strings
+F-Strings
+Template Strings
+Cookies
+Sessions
+Sql Injection Attack
+Css Positioning
+Headers
+Sidebar
+Mutation
+Fixed
+Relative
+Absolute
+Relative In Absolute
+.Value
+<Nav>
+<Div>
+<Button>
+Events
+Accessibility
+Guard Operator
+Guardian Pattern
+Default Operator
+Null Checks
+Garbage Value
+Try Catch Error
+Throw New Error
+Require + Revert
+Sybil Attack
+Hard Fork
+Git Commit
+Git Merge
+List Comprehension
+Initialize Literals
+Dictionary Comprehension
+For K\V In Dict.Items()
+Enumerate
+Zip
+Foreach
+Map
+Callback Function
+Higher Order Function
+Pure Function
+Stateful
+Stateless
+Dynamic
+Layout.Html
+Framework
+Api
+Endpoint
+Global Variable
+Hoisting
+Function Prototyping
+Extern/ Export / Global Declaration
+Liskov Substitution
+Interfaces As Types
+Polymorphism
+Slicing
+Substring()
+String Representation
+Object Comparison
+__Str__
+__Add__
+Tostring
+Character.Digit
+Re.Findall()
+Re.Search()
+Compile Pattern
+Match Object
+Match And Extract Groups
+Re.Sub()
+Split
+Replaceall
+Parity
+Json
+Shorthand Property
+Shorthand Method
+Destructuring
+Superset
+Typescript
+Transpile
+Return Type
+Linter
+Compiler
+Machine Code
+Assembly
+Fortran
+Environment Variable
+Os.Environ
+Os Module
+Os.Path
+Public Key Cryptography
+Type Coercion
+Data Types
+Floating Point Number
+Integer Rollover
+Truncation
+Absolute Number
+Event Loop
+Event Listener
+Property
+Attribute
+Method
+Element
+Member
+Idiomatic Language
+Design Patterns
+Singleton
+Factory Pattern
+Single Point Of Access
+Exit Codes
+Real Number
+Natural Number
+Little Gauss Formula (N*(N+1))/2
+Procedural Programming
+Client Expectations
+Start High
+Two Pointers
+Length - 1
+Developers Docs
+Markdown
+Documenting Functions
+Pytest
+Unit Testing
+Coverage
+Test Driven Development
+Ci/Cd
+Breaking Changes
+Comingling
+External Stylesheet
+Static Resources
+Heap
+Memory Management
+Recursion
+Call Stack
+Pass By Value
+Pass By Reference
+Pointers
+Addresses
+Reference Count
+Value Of Operator
+Address Of Operator
+Garbage Collection
+Scope
+Local Inner Variables
+Shadowing
+Data Hiding
+Private
+Inheritance
+Non-Deterministic
+Deterministic
+Definite Assignment
+Just In Time Compilation
+Parse Tree
+Compiler Optimizations
+Preprocessor Directives
+#Include
+Header Files
+Runtime Libraries
+Index Of
+Last Index Of
+Index()
+Rindex()
+Array.Reduce()
+Array.Splice()
+Multiple Inheritance
+Diamond Inheritance Problem
+K+R Style
+Concurrency
+Parallelism
+#Define
+Constants
+Const
+Reassignment
+Object.Freeze()
+Bracket Notation
+Dot Notation
+Character Arrays
+Strings As Objects
+Pandas
+Money Math
+Numpy
+Floating Point Imprecision
+Precision
+Redis Db
+Array.Push
+Array.Pop
+Stack
+Queue
+Lifo
+Fifo
+Doubly Linked List
+Reverse Linked List
+Structured Programming
+Goto/Label/Break
+Os.Getcwd()
+Interface
+Super()
+This()
+Constructor
+__Init__
+__Init.Py__
+Java Project
+Fully Qualified Name
+Fully Qualified Domain
+Subdomain
+Top Level Domain
+Clean Url
+Uri
+Implicit Coercion
+Number Base Systems
+String Concatenation
+Overloading
+Overriding
+Concrete Implementation
+Coupling
+Polymorphism
+Dynamic Polymorphism
+Runtime Errors

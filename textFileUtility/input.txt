@@ -1,0 +1,53 @@
+Scrapy, wireshark , typer ,typehints ,type annotation , mypy, command line arguments,
+Rust , i32 , fn myFun() , main() , lambda , flex-wrap , flex-shrink , flex-grow , element , prepend, prepend element,
+Requests , beautifulsoup ,node abstract baseclass , css selectors , implement , document , innerhtml, append innerhtml ,
+Complement, flask ,instantiate flask + typer , @app.command , def myClicommand(arg1:int): , decorator pattern, webapp, controller , view , route, post/get , methods , forms , inputs, select , option , name attribute , required, 
+multiple element selector, autocomplete attribute , autofocus attribute , pseudoclasses , attribute Selector , id Selector , 
+Direct descendant selector , all descendant selector , viewport , media queries , responsive design , @media (min/max-width){
+Rems, ems, % measurement, device width , screen orientation , class selector , code generation , race condition , async, 
+Interpreter ticks , signals, GIL , locks , synchronization techniques , transactions , relational db , non-relational , SQLite , 
+INSERT INTO , VALUES(?) , Columns, Rows , Language Constructs , Subquery , JOIN this ON this.id = other.this_id; ,
+UPDATE tablename SET , Where clause , DROP TABLE myTable; , DELETE FROM myTable; , matching SQL , wildcard , DISTINCT() ,
+AVG , MIN , MAX , COUNT , ALTER TABLE tablename , "IN" SQL , primary key , foreign key , 
+PRIMARY KEY(id) , FOREIGN KEY this.otherid REFERENCES other.id; , .schema , .help , .import , Find command , -name , -iname , 
+-ctime , -type , -size , -exec , locate command , updatedb , app.run(debug=true) , flask mail , flask session , app.config ,
+@app.route("/") , Methods=["POST" "GET"] , render_template , request.args.get() , request.forms.get() , 
+((random.int)%maxvalue)+min , import sqlite3 , conn = sqlite3.connect() , c = conn.cursor() , c.execute("INSERT INTO")
+c.executemany(queries) , conn.rowfactory = sqlite3.row , c.fetch() executed query , fetchMany , c.fetchAll ,  "use strict"
+Setinterval() , setTimeout() , borrow checker , semantic elements , screen readers , pseudoelement selector , cascade css
+Css specificity , factoring out commonalities , separation of concerns , clientside , serverside , javascript frontend ,
+Controllers backend , MVC model view controller , business logic , API , web services , graph theory , edges , combinatorial ,
+Time complexity , polynomial , big O , theoretical efficiency , sequential , flow of control , arrayList , linkedList , list interface , 
+First class functions , functional programming , closures , hidden outer variable , granular control OOP , access modifiers ,
+Arrow functions , Document object model, Max identifier length , Case conventions , Pascal Case , kebab-case , camelCase ,
+Exponential runtime , nested for loop , labelled break , fallthrough , window alert, console.log() , new Date() , toLocaleString()
+Reference types , Wrapper class , document.QuerySelector()  , QuerySelectorAll() , Heterogenous Containers ,
+Homogenous Containers , ParseInt , ParseFloat , Formatting Strings , f-Strings , template Strings , cookies , sessions , 
+SQL injection attack, CSS positioning , headers , sidebar , Mutation , fixed , relative , absolute , relative in absolute , 
+.value , <nav> , <div> , <button> , events, accessibility , guard operator , guardian pattern , default operator , null checks ,
+Garbage value , try catch error , throw new error, require + revert , Sybil attack , Hard fork , git commit , git merge , 
+List comprehension , initialize literals
+Dictionary comprehension , for k\v in dict.items() ,  enumerate, zip , forEach , map , callback function , higher order function , 
+pure function
+Stateful , Stateless, dynamic , layout.html , framework , API , endpoint , global variable , hoisting , function prototyping ,
+Extern/ export / global declaration , liskov substitution , interfaces as types , polymorphism , slicing , substring() , string representation
+Object comparison , __str__ , __add__ , toString , character.digit , re.findall() , re.search() , compile pattern , match object 
+Match and extract groups , re.Sub() , split , replaceAll , Parity , JSON , shorthand property , shorthand method ,  destructuring , 
+Superset , typescript , transpile , return type , linter , compiler , machine code , assembly , Fortran , environment variable , 
+OS.environ , OS module , OS.path , public key cryptography , Type coercion , Data types , Floating point number , 
+Integer rollover , Truncation , Absolute number , event loop , event listener , property , attribute , method , element , member,
+Idiomatic language , Design patterns , Singleton , Factory Pattern , Single point of access , exit codes , Real number , Natural number
+Little gauss formula (n*(n+1))/2 , Procedural programming , Client expectations , Start high , Two pointers , Length - 1
+Developers Docs , Markdown , Documenting Functions , PyTest, unit testing , coverage , Test driven development , CI/CD ,
+Breaking changes , comingling , external stylesheet , static resources , heap , memory management , recursion , call stack ,
+Pass by value , pass by reference , pointers, addresses , reference count, value of operator , address of operator , garbage collection
+Scope , local inner variables , shadowing , data hiding , private , inheritance , non-deterministic , deterministic , definite assignment
+Just in time compilation , parse tree , compiler optimizations , preprocessor directives ,#include , header files , runtime libraries,
+Index of , last Index of , index() , rindex() , array.reduce() , array.splice() , multiple inheritance , diamond inheritance problem,
+K+R style , concurrency ,parallelism , #define , Constants , const, reassignment , object.freeze() , bracket notation , dot notation
+Character arrays , strings as objects , pandas , money math , numpy , floating point imprecision , precision , redis DB , 
+Array.push , array.pop , stack , queue, LIFO , FIFO ,doubly linked list , reverse linked list , structured programming , 
+Goto/label/break , OS.getcwd() , interface , super() , this() , constructor , __init__ , __init.py__ , Java project , fully qualified name,
+Fully qualified domain , subdomain , top level domain , clean URL , URI , implicit coercion , number base systems , 
+string concatenation , overloading , overriding , concrete implementation , coupling , polymorphism , dynamic polymorphism
+Runtime errors, 
