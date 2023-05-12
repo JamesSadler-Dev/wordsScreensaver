@@ -35,7 +35,7 @@ def command(filename,outputname):
     with open(outputname,"w") as outputFile: 
         for word in words:
             if len(word) > 1:
-                outputFile.write((str(word).strip().title()) + "\n")
+                outputFile.write((str(word).strip()) + "\n")
     sys.exit(0)
 
 if __name__ == "__main__":

@@ -96,6 +96,7 @@ int main()
     int xlCutoff = 17;
     int randomBuffer1;
     int randomBuffer2;
+    string signalType;
     // screensaver loop
     while (true)
     {
@@ -107,6 +108,7 @@ int main()
         */
         if (words[randomIndex].length() > 44){
             sprintf(outputWord, "\u001b[32m%s", words[randomIndex].c_str());
+            signalType="1a";
         }
         else if ( words[randomIndex].length() > wraplen ){
 
@@ -119,10 +121,13 @@ int main()
                 //extra padding if it's too long
                 if (words[randomIndex].length() > 19){
                     sprintf(outputWord, "\u001b[35m%23s", words[randomIndex].c_str());
+                    signalType="2a";
                 } else if (words[randomIndex].length() > 15){
-                    sprintf(outputWord, "\u001b[35m%20s", words[randomIndex].c_str());    
+                    sprintf(outputWord, "\u001b[35m%21s", words[randomIndex].c_str());
+                    signalType="2b";    
                 } else {
                     sprintf(outputWord, "\u001b[32m%17s", words[randomIndex].c_str());
+                    signalType="2c";
                 }
             }
                 /* CASE 3: 
@@ -136,13 +141,14 @@ int main()
                 *    IF FIRSTPART IS LONGER THAN LONG CUTOFF
                 */
                 if (firstPart.length() > padleftLongMin + 2){
-                    
                     // LONG FIRSTPART --- SHORT LASTPART
                     if (lastPart.length() < padleftTinyMax) {
-                        if (firstPart.length() > xlCutoff){
-                            sprintf(outputWord, "\u001b[32m%20s\n%15s", firstPart.c_str() , lastPart.c_str());
+                        if (firstPart.length() > xlCutoff + 2){
+                            sprintf(outputWord, "\u001b[32m%22s\n%14s", firstPart.c_str() , lastPart.c_str());
+                            signalType="3a";
                         } else {
-                            sprintf(outputWord, "\u001b[35m%19s\n%15s", firstPart.c_str() , lastPart.c_str());
+                            sprintf(outputWord, "\u001b[35m%20s\n%14s", firstPart.c_str() , lastPart.c_str());
+                            signalType="3b";
                         }
                         
                     // FIRSTPART LONGER THAN LONG CUTOFF AND SHORTER THAN XLCUTOFF -- NORMAL LASTPART
@@ -150,15 +156,41 @@ int main()
                         //DON'T PAD LASTPART AS MUCH IF IT's TOO SHORT
                         if (lastPart.length() < 9){
                             sprintf(outputWord, "\u001b[32m%19s\n%16s", firstPart.c_str() , lastPart.c_str());
+                            signalType="3c";
                         }else {
                             sprintf(outputWord, "\u001b[35m%19s\n%18s", firstPart.c_str() , lastPart.c_str());
-                        }
-                        //FIRSTPART EVEN LONGER THAN XL CUTOFF
+                            signalType="3d";
+                        }  
                     } else {
-                        if (lastPart.length() < 9){
+                        //FIRSTPART EVEN LONGER THAN XL CUTOFF
+                        // if FIRSTPART too long just format it normally
+                        if (firstPart.length() > 24){
+                            sprintf(outputWord, "\u001b[32m%s", words[randomIndex].c_str());
+                            signalType="3e";
+                        // long first part and long last part   
+                        } else if (firstPart.length() > 20){
+                            if (lastPart.length() > xlCutoff){
+                                sprintf(outputWord, "\u001b[32m%22s\n%21s", firstPart.c_str() , lastPart.c_str());
+                                signalType="3f";
+                            } else {
+                                sprintf(outputWord, "\u001b[32m%22s\n%18s", firstPart.c_str() , lastPart.c_str());
+                                signalType="3g";
+                            }
+                        // long firstpart and lastpart
+                        } else if (lastPart.length() > xlCutoff + 1){
+                            sprintf(outputWord, "\u001b[32m%21s\n%22s", firstPart.c_str() , lastPart.c_str());
+                            signalType="3h";
+                        
+                        // lastpart too short print normally
+                        } else if (lastPart.length() < padleftTinyMax){
+                            sprintf(outputWord, "\u001b[32m%s", words[randomIndex].c_str());
+                            signalType="3i";
+                        } else if (lastPart.length() < 9){
                             sprintf(outputWord, "\u001b[32m%21s\n%16s", firstPart.c_str() , lastPart.c_str());
+                            signalType="3j";
                         }else {
-                            sprintf(outputWord, "\u001b[32m%21s\n%17s", firstPart.c_str() , lastPart.c_str());
+                            sprintf(outputWord, "\u001b[32m%22s\n%21s", firstPart.c_str() , lastPart.c_str());
+                            signalType="3k";
                         }
                     }
 
@@ -168,11 +200,14 @@ int main()
                 } else if (firstPart.length() > padleftShortMin ) {
                     if (lastPart.length() < padleftTinyMax) {
                         sprintf(outputWord, "\u001b[35m%19s\n%14s", firstPart.c_str() , lastPart.c_str());
+                        signalType="4a";
                     //DON'T PAD LASTPART AS MUCH IF IT's TOO SHORT
                     } else if (lastPart.length() < 10){
                         sprintf(outputWord, "\u001b[32m%18s\n%15s", firstPart.c_str() , lastPart.c_str());
+                        signalType="4b";
                     } else {
                         sprintf(outputWord, "\u001b[32m%19s\n%17s", firstPart.c_str() , lastPart.c_str());
+                        signalType="4c";
                     }
                 
                     /* CASE 5: 
@@ -181,34 +216,64 @@ int main()
                     * 
                     */
                 } else if (firstPart.length() < padleftShortMin) {
+                    
                     if (firstPart.length() == lastPart.length()){
                         sprintf(outputWord, "\u001b[35m%16s\n%16s", firstPart.c_str() , lastPart.c_str());
+                        signalType="5a";
                     } else if (firstPart.length() <= padleftTinyMax) {
-                        sprintf(outputWord, "\u001b[35m%13s\n%18s", firstPart.c_str() , lastPart.c_str());
+                        if (lastPart.length() > xlCutoff + 2){
+                            sprintf(outputWord, "\u001b[35m%14s\n%23s", firstPart.c_str() , lastPart.c_str());
+                            signalType="5b";
+                        }else if (lastPart.length() > padleftLongMin){
+                            sprintf(outputWord, "\u001b[35m%14s\n%19s", firstPart.c_str() , lastPart.c_str());
+                            signalType="5c";
+                        }
+                        else {
+                            sprintf(outputWord, "\u001b[35m%14s\n%19s", firstPart.c_str() , lastPart.c_str());
+                            signalType="5d";
+                        }
+                        
                     // if firstpart between padleftTiny-padLeftShort
                     } else if (firstPart.length() < 9){
                         sprintf(outputWord, "\u001b[32m%15s\n%17s", firstPart.c_str() , lastPart.c_str());
+                        signalType="5e";
                     
                     //If LASTPART is LESS than tiny or medium cutoff
                     } else if (lastPart.length() < padleftTinyMax){
                         sprintf(outputWord, "\u001b[32m%16s\n%13s", firstPart.c_str() , lastPart.c_str());  
-                    // if LASTPART is LONGER than padding cutoff
-                    } else if (lastPart.length() > padleftShortMin){
-                        sprintf(outputWord, "\u001b[32m%16s\n%20s", firstPart.c_str() , lastPart.c_str());        
+                        signalType="5f";
+                           
                     //DON'T PAD LASTPART AS MUCH IF IT's TOO SHORT
                     } else if (lastPart.length() < 9){
                         sprintf(outputWord, "\u001b[32m%16s\n%14s", firstPart.c_str() , lastPart.c_str());
-  
-                   // } else if (lastPart.length() >= 9 && firstPart.length() > lastPart.length()){
-                   //     sprintf(outputWord, "\u001b[35m%17s\n%16s", firstPart.c_str() , lastPart.c_str()); 
-                    } else if (lastPart.length() >= 9 && firstPart.length() <= lastPart.length()){
-                        sprintf(outputWord, "\u001b[32m%16s\n%17s", firstPart.c_str() , lastPart.c_str());   
-                    } else if (firstPart.length() >= 11){
-                        sprintf(outputWord, "\u001b[32m%17s\n%16s", firstPart.c_str() , lastPart.c_str());         
+                        signalType="5g";
+     
+                    } else if (firstPart.length() >= 11){ 
+                        if (lastPart.length() > xlCutoff){
+                            sprintf(outputWord, "\u001b[32m%17s\n%20s", firstPart.c_str() , lastPart.c_str()); 
+                            signalType="5h";    
+                            } else {
+                            sprintf(outputWord, "\u001b[34m%17s\n%16s", firstPart.c_str() , lastPart.c_str());   
+                            signalType="5i";  
+                            }    
                     } else if (firstPart.length() >= 9){
-                        sprintf(outputWord, "\u001b[32m%16s\n%16s", firstPart.c_str() , lastPart.c_str());     
+                            if (lastPart.length() > xlCutoff){
+                                sprintf(outputWord, "\u001b[32m%16s\n%23s", firstPart.c_str() , lastPart.c_str());  
+                                signalType="5j";   
+                            } else if (lastPart.length() >= 11) {
+                                sprintf(outputWord, "\u001b[32m%16s\n%20s", firstPart.c_str() , lastPart.c_str());     
+                                signalType="5k";
+                            } else {
+                                sprintf(outputWord, "\u001b[32m%16s\n%16s", firstPart.c_str() , lastPart.c_str());     
+                                signalType="5h";
+                            }
+                    // if LASTPART is LONGER than padding cutoff
+                    } else if (lastPart.length() > padleftShortMin){
+                        sprintf(outputWord, "\u001b[32m%16s\n%21s", firstPart.c_str() , lastPart.c_str());      
+                        signalType="5l";   
                     } else {
                         sprintf(outputWord, "\u001b[35m%17s\n%18s", firstPart.c_str() , lastPart.c_str());  
+                        signalType="5m";
                 }
                 }
         }
@@ -220,16 +285,24 @@ int main()
         * 
         */
         else  {
-            if (words[randomIndex].length() > padleftLongMin + 2){
+            if (words[randomIndex].length() > padleftLongMin + 4){
+                sprintf(outputWord, "\u001b[34m%21s", words[randomIndex].c_str());
+                signalType = "za";
+            } else if (words[randomIndex].length() > padleftLongMin + 2){
                 sprintf(outputWord, "\u001b[34m%20s", words[randomIndex].c_str());
+                signalType = "zb";
             } else if (words[randomIndex].length() > padleftLongMin){
                 sprintf(outputWord, "\u001b[31m%19s", words[randomIndex].c_str());
+                signalType = "zb";
             } else if (words[randomIndex].length() > padleftShortOneLineMin){
                 sprintf(outputWord, "\u001b[95m%17s", words[randomIndex].c_str());
+                signalType = "zc";
             } else if (words[randomIndex].length() < padleftTinyMax) {
                 sprintf(outputWord, "\u001b[33m%13s", words[randomIndex].c_str());
+                signalType = "zd";
             } else {
                 sprintf(outputWord, "\u001b[97m%15s", words[randomIndex].c_str());
+                signalType = "ze";
             }
 
         }
@@ -240,7 +313,7 @@ int main()
         printBuffer(9);
 
         cout << outputWord;
-
+        cout << "\n\t\t"+ signalType;
         printBuffer(randomBuffer2);
 
         if (sleepLoopExited(1)){
