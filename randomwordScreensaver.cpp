@@ -261,7 +261,7 @@ int main()
                                 sprintf(outputWord, "\u001b[32m%16s\n%23s", firstPart.c_str() , lastPart.c_str());  
                                 signalType="5j";   
                             } else if (lastPart.length() >= 11) {
-                                sprintf(outputWord, "\u001b[32m%16s\n%20s", firstPart.c_str() , lastPart.c_str());     
+                                sprintf(outputWord, "\u001b[32m%16s\n%17s", firstPart.c_str() , lastPart.c_str());     
                                 signalType="5k";
                             } else {
                                 sprintf(outputWord, "\u001b[32m%16s\n%16s", firstPart.c_str() , lastPart.c_str());     
@@ -300,9 +300,12 @@ int main()
             } else if (words[randomIndex].length() < padleftTinyMax) {
                 sprintf(outputWord, "\u001b[33m%13s", words[randomIndex].c_str());
                 signalType = "zd";
+            } else if (words[randomIndex].length() > 10) {
+                sprintf(outputWord, "\u001b[97m%16s", words[randomIndex].c_str());
+                signalType = "ze";
             } else {
                 sprintf(outputWord, "\u001b[97m%15s", words[randomIndex].c_str());
-                signalType = "ze";
+                signalType = "zf";
             }
 
         }
