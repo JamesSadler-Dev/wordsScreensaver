@@ -36,10 +36,10 @@ View
 Route
 Post/Get
 Methods
-Forms
-Inputs
-Select
-Option
+<Form>
+<Input>
+<Select>
+<Option>
 Name Attribute
 Required
 Multiple Element Selector
@@ -54,8 +54,8 @@ Viewport
 Media Queries
 Responsive Design
 @Media (Min/Max-Width){
-Rems
-Ems
+Rem Measurement
+Em Measurement
 % Measurement
 Device Width
 Screen Orientation
@@ -86,10 +86,10 @@ Delete From Mytable;
 Matching Sql
 Wildcard
 Distinct()
-Avg
-Min
-Max
-Count
+Avg()
+Min()
+Max()
+Count()
 Alter Table Tablename
 "In" Sql
 Primary Key
@@ -114,7 +114,7 @@ Flask Session
 App.Config
 @App.Route("/")
 Methods=["Post" "Get"]
-Render_Template
+Render_Template()
 Request.Args.Get()
 Request.Forms.Get()
 ((Random.Int)%Maxvalue)+Min
@@ -125,8 +125,8 @@ C.Execute("Insert Into")
 C.Executemany(Queries)
 Conn.Rowfactory = Sqlite3.Row
 C.Fetch() Executed Query
-Fetchmany
-C.Fetchall
+Fetchmany()
+C.Fetchall()
 "Use Strict"
 Setinterval()
 Settimeout()
@@ -185,8 +185,8 @@ Document.Queryselector()
 Queryselectorall()
 Heterogenous Containers
 Homogenous Containers
-Parseint
-Parsefloat
+Parseint()
+Parsefloat()
 Formatting Strings
 F-Strings
 Template Strings
@@ -372,8 +372,8 @@ Numpy
 Floating Point Imprecision
 Precision
 Redis Db
-Array.Push
-Array.Pop
+Array.Push()
+Array.Pop()
 Stack
 Queue
 Lifo
@@ -406,3 +406,446 @@ Coupling
 Polymorphism
 Dynamic Polymorphism
 Runtime Errors
+Length Method Vs Property
+Unicode
+Utf8
+Html Entities
+Css Box Model
+Box Sizing Border-Box
+Evaluation
+Declaration
+Expression
+Statement
+Rgb
+Hsb
+Opacity:
+Transition:
+::Hover
+::Active
+::Focus
+::Visited
+Text-Decoration
+Font-Weight:500
+Metatags
+Keywords
+Meta Description
+Header Main Footer
+<Script>
+<Link Src= Rel="Stylesheet">
+<Iframe>
+<Table>
+<Thead>
+<Tbody>
+<Th>
+<Td>
+<Dl><Dt>
+<Hr>
+<Br>
+&Nbsp
+Hex
+Number Systems
+Radix
+Black Box Methods
+Don'T Repeat Yourself
+Method Chaining
+<A Href>
+<Html>
+Css Reset
+Requests.Get(Link)
+None
+Undefined
+Null
+Sentinel Character
+Disabled Attribute
+Create Index
+B-Trees
+Binary Search Tree
+Red Black Trees
+Balancing Trees
+*Node
+Struct
+Typedef
+Switch
+Case
+Break
+Default
+Null Pointer Error
+Dangling Pointer
+Memory Leak
+Malloc()
+Sizeof()
+Free()
+Temp
+Swap(&A &B)
+Passing Copy Of Reference
+Load Balancer
+Tcp
+Packets
+Guaranteed Delivery
+Http
+Http Headers
+Hashmap
+Dict
+Map
+Mapping
+Literals
+Static
+Static Context
+Instance Variable
+Inner Class
+Private Inner Class
+Outer Class
+Superclass
+Del
+Continue
+Break
+Accumulator Pattern
+<Img>
+<Video>
+Autoplay Attribute
+Muted Attribute
+Controls Attribute
+Block Element
+Inline Block
+Max Recursive Depth
+Lexical Analyzer
+Literate Programming
+Flow Chart Style
+Border Radius
+<Input> Type Checkbox
+<Input> Type: Radio
+<Input> Type: Text
+<Input> Type: Submit
+<Input> Type: Reset
+Constant Time
+Boilerplate
+Doctype Declaration
+Module
+Library
+Package
+Class
+Csv
+Flat File Database
+Dictreader
+Dictwriter
+Context Manager
+Multiprocessing
+Concurrent.Futures
+Await
+Color:
+Background-Color:
+Border-Style:
+Border-Radius:
+Padding:
+Margin:
+Flex-Direction:Column
+Flex-Shrink=0
+Text-Shadow:
+Box-Shadow:
+Unsigned Numbers
+Format Codes
+Character Classes
+Cron
+Jobs
+Bg
+Fg
+Rest Params
+Variable Arity
+Spread Operator(Â€¦)
+Packing/Unpacking
+*Args
+**Kwargs
+Get() Default Value
+Traversal
+Iterator Pattern
+Iterable
+Iterator
+Return
+Yield
+Contiguous Memory
+Pointer Arithmetic
+Buffer Overflow
+Segfault
+Fgets()
+Scanf()
+Determinant Loop
+Indeterminant Loop
+Merge Conflict
+Commit History
+Straight Through Merge
+Three Way Merge
+Rebasing
+__Main__
+If __Name__ == "__Main__"
+Binary Search
+Staging Area
+Event Driven Programming
+Line Height:
+Column-Gap:
+Row-Gap:
+Character-Gap:
+Font Stack
+Fallback Font
+Importing Fonts Html
+Worker Async
+Threadsafe Collection
+Hashtable
+Discrete Math
+Induction
+Correctness
+Exponential Runtime
+Quadratic Runtime
+Sqrt Newton Formula
+Double
+Long
+Scientific Notation
+Indentation
+Curly Brackets
+Modularity
+Bootstrap
+Css
+React
+Npm
+Node.Js
+Javascript Engine
+Jvm
+Evm
+Uint256
+Int256
+String
+Address
+Payable Address
+Returns(String)
+Placeholders
+Interpolation
+Bytecode
+Async Sleep
+Coroutine
+Virtual + Override
+Enum
+Var
+Strongly Typed
+Weakly Typed
+Mouse+Kb Events
+Html+Css+Js
+Df.Iloc()
+Soup.Select()
+Blocking
+Non-Blocking
+Async Def
+Sorting Algos
+Searching Algos
+Grep
+Ls
+Cd
+Cp
+Mv
+Ls -La
+Ps
+Pid
+Kill -9
+Kill -15
+Sigint
+Sigkill
+Sigterm
+Ctrl+C
+Ctrl+X
+Ide
+Live Server
+Nan
+For..In
+For:Each Java
+For..Of
+Do..While
+Bottom Tested Loop
+Top Tested Loop
+I/O Bound
+Cpu Bound
+Amdahls Law
+Association Lists
+Venv
+Import
+Subpackage
+Compiler Error
+Syntax Error
+Valgrind
+Lint
+Cache
+Fetch Api
+Readable Code
+Incrementing
+Decrementing
+Loop Control Variable
+Priming Loop
+Strace
+Ip
+Ipconfig
+Ifconfig
+Metacharacters
+Pattern.Compile()
+Strcmp()
+Strlen()
+Strcpy()
+<Stdio.H>
+<Stdlib.H>
+<Strings.H>
+Getline
+Getchar
+Ordinal Values
+Character Arithmetic
+Shell
+Repl
+Print()
+Echo
+System.Out Println("Helloworld");
+Printf()
+Format()
+Arrays
+Objects Js
+Top
+Htop
+Du -H
+Df -H
+Human Readable -H
+Verbose -V
+Rmdir
+Rm -Ri
+Ls -Lah
+Functional Interface
+Single Abstract Method
+Fdisk
+Symlink
+Hardlink
+Ln -S
+Chmod
+Chgrp
+Group
+Owner
+Sudo
+Superuser
+Su --Login
+Su -
+Chmod Octal
+Chmod U+Rwx
+Byte
+Bit
+Char
+Raw String
+Encoding
+Decoding
+Helper Function
+Contains()
+Strict Equality
+Truthy Falsy
+Es6
+Arrow Operator
+Cpython
+Capi
+Interpreter
+Next.Js
+Array.Aslist()
+Java.Util.*
+Javafx
+Javaswing
+Frame
+Window
+Gui Programs
+Blob
+Text
+Text Not Null
+Integer
+Numeric
+As Sql
+Justify-Content: Spaced-Between
+Justify-Content: Between
+Justify-Content: Start
+Justify-Content:End
+Justify-Content:Center
+Relative Measurements
+Absolute Measurements
+User Agent Stylesheet
+Dev Tools
+Computed Tab
+Localstorage
+Json Stringify
+Json Parse String
+Xml
+Style
+Styleguide
+Pep8
+Convention
+Binary Operator
+Ternary Operator
+Initialization
+Relational Operators
+Javac
+Gcc
+For Loop Cstyle
+Register Variable
+Tkinter
+Display Manager
+X  Window Manager
+Files
+Directories
+Executable
+Ssh
+Ports
+Services
+Port 21
+Port 22
+Port 80
+Port 443
+Https
+Class Variables
+Class Constants
+Static Methods
+@Staticmethod
+@Classmethod
+Variable
+Block
+Statement
+Expression
+Invoking Function
+Returning Function
+Port Forward
+Firewall
+Fopen()
+Filemodes
+Write Mode
+Append Mode
+Read Mode
+Wc
+Uniq
+Count
+Uniq -C
+Piping
+Pipelines
+Redirecting Output
+"2>"
+">&"
+Pwd
+Powershell
+Wsl
+Active Directory
+Default Noargs Constructor
+Primitive Types
+Timer
+Shortcircuit Evaluation
+Space Complexity
+Algorithms
+Linux
+Gnu
+Git
+Github
+Solidity
+Test
+Counting Operations
+Negation
+Iterations
+String.Repeat()
+Precondition
+Postcondition
+Modeling Real Life Objects
+And &&
+Or ||
+Bitwise Operators
