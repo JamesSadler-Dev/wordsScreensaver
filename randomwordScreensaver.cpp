@@ -102,12 +102,24 @@ int main()
     int randomBuffer1;
     int randomBuffer2;
     string signalType;
+    string past;
     // screensaver loop
     while (true)
     {
         system("cls");
         int randomIndex = rand() % words.size();
 
+        // Skip repeats
+        if (!past.empty()){
+            if (words[randomIndex].c_str() == past) {
+                continue;
+            } else {
+                past = words[randomIndex].c_str();
+            }
+        } else {
+            past = words[randomIndex].c_str();
+        }
+        
         /* 
         *   CASE 1: LINE IS REALLY LONG JUST PRINT NORMALLY
         */
@@ -321,7 +333,6 @@ int main()
         printBuffer(9);
 
         cout << outputWord;
-
         //DEBUG OUTPUT
         //cout << "\n\t\t"+ signalType;
 
