@@ -316,10 +316,13 @@ int main()
         printBuffer(9);
 
         cout << outputWord;
-        cout << "\n\t\t"+ signalType;
+
+        //DEBUG OUTPUT
+        //cout << "\n\t\t"+ signalType;
+
         printBuffer(randomBuffer2);
 
-        if (sleepLoopExited(1)){
+        if (sleepLoopExited(10)){
             return 0;
         }
     }
