@@ -322,7 +322,7 @@ int main()
 
         printBuffer(randomBuffer2);
 
-        if (sleepLoopExited(10)){
+        if (sleepLoopExited(20)){
             return 0;
         }
     }
