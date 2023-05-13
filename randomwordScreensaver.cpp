@@ -338,7 +338,7 @@ int main()
 
         printBuffer(randomBuffer2);
 
-        if (sleepLoopExited(25)){
+        if (sleepLoopExited(30)){
             return 0;
         }
     }
