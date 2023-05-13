@@ -54,9 +54,14 @@ int sleepLoopExited(int n){
         {
             return 1;
         }
-            //sleep for one second n times
+        //Skip this word but don't exit program with kb right function
+        if (GetAsyncKeyState(VK_RIGHT)){
+            return 0;
+        }
+            //sleep for one second n times in the loop to be more responsive
             this_thread::sleep_for(chrono::seconds(1));
         }
+        //onto the next word if we reached 0
         return 0;
     }
 
@@ -322,7 +327,7 @@ int main()
 
         printBuffer(randomBuffer2);
 
-        if (sleepLoopExited(20)){
+        if (sleepLoopExited(25)){
             return 0;
         }
     }
