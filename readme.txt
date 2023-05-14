@@ -1,0 +1,1 @@
+put words.txt in c:\windows\system32 folder

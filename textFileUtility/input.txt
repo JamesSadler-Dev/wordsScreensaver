@@ -260,4 +260,4 @@ TypeOf Operator , Errors , Handling Exceptions , Checked Exceptions , Unchecked 
 Reprompting , Sass , .scss , Sass --watch , Sass Variables , 
 Sass Inheritance , %mySassClass{color:green} , {%extends layout.html%} , {%block body%} , {%endblock%} , 
 Extends %mySassClass , Patching Diffs , Levels of Abstraction , Iterative Solution , Recursive Solution ,
-Cascading Conditions , 
+Cascading Conditions , sprintf() , rand() , Stream operators , cout , sys.exit(0) , sys.argv
