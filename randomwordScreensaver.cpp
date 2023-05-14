@@ -119,6 +119,11 @@ int main()
     {
         system("cls");
         int randomIndex = rand() % words.size();
+        
+        //guardian pattern
+        if (words[randomIndex].length() < 1){
+            continue;
+        }
 
         // Skip repeats
         if (!past.empty()){
@@ -134,6 +139,8 @@ int main()
         /* 
         *   CASE 1: LINE IS REALLY LONG JUST PRINT NORMALLY
         */
+        
+
         if (words[randomIndex].length() > 44){
             sprintf(outputWord, "\u001b[32m%s", words[randomIndex].c_str());
             signalType="1a";
