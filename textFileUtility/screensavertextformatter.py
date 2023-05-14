@@ -8,6 +8,9 @@ def command(filename,outputname):
     words= []
     filename= str(filename)
     outputname = str(outputname)
+    wordsSet= set()
+    duplicates= set()
+    seen = set()
 
     ##some argument parsing
     if not sys.argv[1]:
@@ -26,16 +29,40 @@ def command(filename,outputname):
             if len(lines[i]) > 1:
                 j=0
                 while j < len(lines[i]):
-                    words.append(lines[i][j])
-                    j+=1
+                    if (lines[i][j].upper().strip() not in seen):
+                        words.append(lines[i][j])
+                        seen.add(lines[i][j].upper().strip())
+                        j+=1
+                    else:
+                        duplicates.add(lines[i][j])  
+                        j+=1  
             else:
-                words.append(str(lines[i][0]))
+                if (lines[i][0].upper().strip() not in seen):
+                    words.append(lines[i][0])
+                    seen.add(lines[i][0].upper().strip())
+                else:
+                    duplicates.add(lines[i][0])  
             i+=1
 
     with open(outputname,"w") as outputFile: 
         for word in words:
             if len(word) > 1:
                 outputFile.write((str(word).strip()) + "\n")
+
+    with open("duplicates.txt","w") as outputFile: 
+        for word in duplicates:
+            if len(word) > 1:
+                outputFile.write((str(word).strip()) + "\n")   
+
+    with open("masterList.txt","w") as outputFile: 
+        counter=1
+
+        for word in words:
+            if len(word) > 1:
+                outputFile.write((str(word).strip()) + " , ") 
+                if (counter % 5 == 0):
+                    outputFile.write("\n")
+                counter+=1
     sys.exit(0)
 
 if __name__ == "__main__":
