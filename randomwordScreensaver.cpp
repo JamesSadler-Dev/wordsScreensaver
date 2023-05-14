@@ -28,9 +28,20 @@ void setfontsize(int height){
 }
 
 void setConsoleFullscreen(){
+    // windows api, get X console window property change constants and set property
     HWND hWnd = GetConsoleWindow();
     SetWindowLong(hWnd, GWL_STYLE, GetWindowLong(hWnd, GWL_STYLE) & ~WS_BORDER & ~WS_CAPTION);
     ShowWindow(hWnd, SW_MAXIMIZE);
+    CONSOLE_CURSOR_INFO cursorInfo;
+    cursorInfo.dwSize = 1;
+    cursorInfo.bVisible = FALSE;
+    SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &cursorInfo);
+    CONSOLE_SCREEN_BUFFER_INFO screenBufferInfo;
+    GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &screenBufferInfo);
+    // Set the console screen buffer size to the maximum window size.
+    COORD newScreenBufferSize = { static_cast<SHORT>(screenBufferInfo.srWindow.Right - screenBufferInfo.srWindow.Left + 1),
+                              static_cast<SHORT>(screenBufferInfo.srWindow.Bottom - screenBufferInfo.srWindow.Top + 1) };
+    SetConsoleScreenBufferSize(GetStdHandle(STD_OUTPUT_HANDLE), newScreenBufferSize);
 }
 
 int sleepLoopExited(int n){

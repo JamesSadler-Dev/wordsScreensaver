@@ -51,7 +51,7 @@ all descendant selector
 viewport
 media queries
 responsive design
-@media (min/max-width){
+@media (min/max-width){ color:blue}
 rem measurement
 em measurement
 % measurement
@@ -121,9 +121,9 @@ conn= sqlite3.connect()
 c = conn.cursor()
 c.execute("INSERT INTO")
 c.executemany(queries)
-conn.rowfactory= sqlite3.row
+conn.rowfactory= Sqlite3.row
 c.fetch() executed query
-fetchMany()
+.fetchMany()
 c.fetchAll()
 "use strict"
 Setinterval()
@@ -153,8 +153,8 @@ big O
 theoretical efficiency
 sequential
 flow of control
-arrayList
-linkedList
+ArrayList<String>
+LinkedList<String>
 list interface
 first class functions
 functional programming
@@ -176,15 +176,15 @@ fallthrough
 window.alert()
 console.log()
 new Date()
-toLocaleString()
+.toLocaleString()
 reference types
 Wrapper class
 document.QuerySelector()
 QuerySelectorAll()
 Heterogenous Containers
 Homogenous Containers
-ParseInt()
-ParseFloat()
+.parseInt()
+.parseFloat()
 Formatting Strings
 f-Strings
 template Strings
@@ -199,7 +199,7 @@ position:fixed
 position:relative
 position:absolute
 position:relative in absolute
-.value
+element.value
 <nav>
 <div>
 <button>
@@ -208,7 +208,6 @@ accessibility
 guard operator
 guardian pattern
 default operator
-null checks
 garbage value
 try catch error
 throw new error
@@ -246,16 +245,16 @@ string representation
 Object comparison
 str()
 add()
-toString()
+.toString()
 Character.digit()
 re.findall()
 re.search()
 compile pattern
 match object
 Match and extract groups
-re.Sub()
+re.sub()
 split()
-replaceAll()
+.replaceAll()
 Parity
 JSON
 shorthand property
@@ -273,7 +272,7 @@ Fortran
 environment variable
 OS.environ
 OS module
-OS.path
+OS.path submodule
 public key cryptography
 Type coercion
 Data types
@@ -300,7 +299,7 @@ Procedural programming
 Client expectations
 Start high Negotiating
 Two pointers
-Length - 1
+Length() - 1
 Developers Docs
 Markdown
 Documenting Functions
@@ -356,7 +355,7 @@ parallelism
 Constants
 const
 reassignment
-object.freeze()
+Object.freeze()
 bracket notation
 dot notation
 Character arrays
@@ -374,6 +373,7 @@ queue
 LIFO
 FIFO
 doubly linked list
+Linked List
 reverse linked list
 structured programming
 Goto/label/break
@@ -382,8 +382,8 @@ interface
 super()
 this()
 constructor
-init()
-init.py
+__init__()
+__init__.py
 Java project
 fully qualified name
 Fully qualified domain
@@ -403,25 +403,25 @@ dynamic polymorphism
 Runtime errors
 length method vs property
 unicode
-utf-8
-HTML entities
+UTF-8
+HTML Entities
 css box model
 box sizing: border-box
-evaluation
+Evaluation
 Declaration
-RGB color
-HSB color
-opacity
-transition
+RGB Color
+HSB Color
+opacity:
+transition:
 .class::hover
 .class::active
 .class::focus
 .class::visited
-Text-decoration
+text-decoration:
 Font-weight:500
-metatags
-keywords
-meta description
+<meta> tags
+<meta> Keywords
+<meta> Description
 <Header>
 <Main>
 <Footer>
@@ -448,7 +448,7 @@ css reset
 requests.get(link)
 None
 undefined
-Null
+NULL
 sentinel character
 Disabled attribute
 B-trees
@@ -460,70 +460,69 @@ struct
 typedef
 switch
 case
-break switch
-default
-null pointer error
-dangling pointer
-memory leak
-Malloc()
+break
+Default
+Null Pointer Error
+Dangling Pointer
+Memory Leak
+malloc()
 sizeof()
 free()
-temp variable
+Temp Variable
 swap(&a &b)
-passing copy of reference
-load balancer
+Passing Copy of Reference
+Load Balancer
 TCP
-packets
-guaranteed delivery
+Packets
+Guaranteed Delivery
 HTTP
-HTTP headers
+HTTP Headers
 Hashmap
 Dict
 Map JS
 mapping(x => y)
-literals
-static
-static context
-instance variable
-inner class
-private inner class
-outer class
-superclass
+Literals
+Static
+Static Context
+Instance Variable
+Inner Class
+Private Inner Class
+Outer Class
+Superclass
 del
-continue
-break
-accumulator pattern
+Continue
+Accumulator Pattern
 <img>
 <video>
-autoplay attribute
-muted attribute
-controls attribute
-block element
-inline block
-max recursive depth
-lexical analyzer
-literate programming
-flow chart style
+autoplay Attribute
+muted Attribute
+controls Attribute
+Block Element
+Inline Block
+Max Recursive Depth
+Lexical Analyzer
+Literate Programming
+Flow Chart Style
 border-radius:
-<input> type checkbox
-<input> Type: radio
+<input> type: checkbox
+<input> type: radio
 <input> type: text
 <input> type: submit
 <input> type: reset
-constant time
-boilerplate
-doctype declaration
-module
-library
-package
-class
+Constant Time
+Boilerplate
+Doctype Declaration
+Module
+Library
+Package
+Class
 CSV
-flat file database
-dictReader
-dictWriter
-context manager
-multiprocessing
-concurrent.futures
+Flat File Database
+DictReader
+DictWriter
+Context Manager
+Multiprocessing
+Concurrent.Futures
 await
 color:
 background-color:
@@ -533,98 +532,99 @@ margin:
 flex-direction:column
 text-shadow:
 box-shadow:
-unsigned numbers
-format codes
-character classes
-cron
+Unsigned Numbers
+Format Codes
+Character Classes
+Cron
 jobs
-bg jobs
-fg jobs
-rest params
-variable arity
-spread operator
-packing/unpacking
+bg
+fg
+Rest Params
+Variable Arity
+Spread Operator
+Packing/Unpacking
 *args
 **kwargs
-get() default value
-traversal
-iterator pattern
-iterable
-iterator
-return
-yield
-contiguous memory
-pointer arithmetic
-buffer overflow
-segfault
+.get() Default Value
+Traversal
+Iterator Pattern
+Iterable
+Iterator
+Return
+Yield
+Contiguous Memory
+Pointer Arithmetic
+Buffer Overflow
+Segfault
 fgets()
 scanf()
-determinant loop
-indeterminant loop
-merge conflict
-commit history
-straight through merge
-three way merge
-rebasing
-main
-if name == "main"
-binary search
-staging area
-event-driven programming
-line height:
+Determinant Loop
+Indeterminant Loop
+Merge Conflict
+Commit History
+Straight Through Merge
+Three Way Merge
+Rebasing
+Main
+If __name__ == "main"
+__name__
+Binary Search
+Staging Area
+Event-Driven Programming
+line-height:
 column-gap:
 row-gap:
 character-gap:
-font stack
-fallback font
-importing fonts HTML
-worker async
-thread-safe collection
-hashtable
-discrete math
-induction
-correctness
-quadratic runtime
-sqrt Newton formula
-double
-long
-scientific notation
-indentation
-curly brackets
-modularity
-bootstrap
+Font Stack
+Fallback Font
+Importing Fonts HTML
+Workers async
+Thread-safe Collection
+Hashtable
+Discrete Math
+Induction
+Correctness
+Quadratic Runtime
+Sqrt Newton formula
+Double
+Long
+Scientific Notation
+Indentation
+Curly Brackets
+Modularity
+Bootstrap
 CSS
 React
 Npm
-Node.Js
-javascript engine
+Node.js
+Javascript Engine
 JVM
 EVM
 uint256
 int256
-string
-address
-payable address
-returns(string)
-placeholders
-interpolation
-bytecode
+String
+Address
+Payable Address
+Returns(string)
+Placeholders
+Interpolation
+Bytecode
 async sleep
-coroutine
-virtual + override
-enum
-var
-strongly typed
-weakly typed
-mouse and KB events
+Coroutine
+Virtual + Override
+Enum
+Var
+Strongly Typed
+Weakly Typed
+Mouse and KB events
 HTML + CSS + JS
-df.iLoc()
+df.iloc()
 soup.select()
-blocking
-non-blocking
+Blocking
+Non-blocking
 async def
-sorting algos
-searching algos
+Sorting Algos
+Searching Algos
 grep
 ls
 cd
@@ -632,142 +632,143 @@ cp
 mv
 ls -la
 ps
-process Id Pid
-kill -9
-kill -15
-Sigint
-sigkill
-sigterm
-ctrl+c
-ctrl+x
+ps -aux
+Process ID PID
+Kill -9
+Kill -15
+SIGINT
+SIGKILL
+SIGTERM
+Ctrl+C
+Ctrl+X
 IDE
-Live server
+Live Server
 NaN
-for..In
-for:each java
+for..in
+for:each Java
 for..of
 do..while
-bottom tested loop
-top tested loop
+Bottom Tested Loop
+Top Tested Loop
 I/O bound
-CPU bound
-Amdahl's law
-association lists
+CPU Bound
+Amdahls Law
+Association Lists
 venv
 import
-subpackage
-compiler error
-syntax error
-selection sort
+Subpackages
+Syntax Error
+Selection Sort
 Valgrind
 lint
-fetch API
-readable code
-incrementing
-decrementing
-loop control variable
-priming loop
+Fetch API
+Readable Code
+Incrementing
+Decrementing
+Loop Control Variable
+Priming Loop
 strace
 IP
 ipconfig
 ifconfig
-metacharacters
-pattern.compile()
+Metacharacters
+Pattern.compile()
 strcmp()
 strlen()
 strcpy()
 <stdio.h>
 <stdlib.h>
 <strings.h>
-getline
+getline()
 getchar()
-ordinal values
-character arithmetic
-shell
-repl
+Ordinal Values
+Character Arithmetic
+Shell
+REPL
 print()
 echo
-System.out println("helloworld");
+System.out println("HelloWorld");
 printf()
-format()
+.format()
 Arrays
-objects js
-Top
+Objects JS
+top
 htop
+top:0 left:0 right:0 height:50px
 du -h
 df -h
-human readable -h
-verbose -v
+Human Readable -h
+Verbose -v
 rmdir
 rm -ri
 ls -lah
-functional interface
-Single abstract method
+Functional Interface
+Single Abstract Method
 fdisk
-symlink
-hardlink
+Symlinks
+Hardlinks
 ln -s
 chmod
 chgrp
 group
-file owner
+File Owners
 sudo
-superuser
+Superuser
 su --login
 su -
-Chmod octal
+Chmod Octal
 chmod U+RWX
 byte
 bit
 char
-raw string
-encoding
-decoding
-helper function
+Raw String
+Encoding
+Decoding
+Helper Function
 contains()
-strict equality
-Truthy falsy
-es6
-arrow operator
-Cpython
-C Api Python
-interpreter
-next.js
-arrays.aslist()
+Strict Equality
+Truthy Falsy
+ES6
+=> Arrow Operator
+CPython
+C API Python
+Interpreter
+Next.js
+Arrays.asList()
 java.util.*
-javaFX
-java Swing
-Jframe
-window
-Gui programs
-blob SQL
-text SQL
-Text not null
-integer SQL
-numeric SQL
-"AS" Sql
-Justify-Content: spaced-between
-Justify-Content: between
-Justify-Content: start
-Justify-Content: end
-Justify-Content: Center
-Relative measurements
-Absolute measurements
-user agent stylesheet
-dev tools chrome
-computed tab
-localstorage
-JSON stringify
-JSON parse string
+JavaFX
+Java Swing
+JFrame
+Window Object
+GUI programs
+Blob SQL
+Text SQL
+text NOT NULL
+Integer SQL
+Numeric SQL
+"AS" SQL
+justify-content: spaced-between
+justify-content: between
+justify-content: start
+justify-content: end
+justify-content: center
+Relative Measurements
+Absolute Measurements
+User Agent Stylesheet
+Dev Tools Chrome
+Computed Tab
+localStorage
+JSON.stringify()
+JSON.parse()
 XML
 Style
-Style guide
+Style Guide
 PEP8
 Conventions
-binary operator
-ternary operator
-initialization
-relational operators
+Binary operator
+Ternary operator
+Initialization
+Relational Operators
 javac
 GCC
 For Loop C
@@ -869,7 +870,6 @@ IntelliJ
 Matcher Object
 Scanner Object
 window .prompt("username:");
-Window Object
 awk
 sed
 xargs
@@ -949,15 +949,17 @@ Multi-line String
 %n
 %g
 %d
+len()
+range()
 %f
 %05d
 %-5d
 %5d
 Allocation
 New Operator
-New Regex()
-startswith()
-endswith()
+new Regex()
+.startswith()
+.endswith()
 ^ Regex
 $ Regex
 \b
@@ -1002,13 +1004,13 @@ from_excel()
 from_csv()
 Writer Object
 File Class
-Localstorage.store()
-Localstorage.get()
-LocalStorage.remove()
+localstorage.store()
+localstorage.get()
+localStorage.remove()
 Array.shift()
 Array.unshift()
 Shallow Copy
-Realloc()
+realloc()
 Buffer
 Vector
 Matrix
@@ -1019,6 +1021,7 @@ Binary
 Bits
 Bytes
 HashMap.put()
+Hashmap.get()
 Subscript Dictionary
 Modifying In-place
 Clobbering
@@ -1084,11 +1087,11 @@ Router Hops
 Line Wrapping
 Content Assist
 Passkey
-Two-Factor
+Two Factor
 linear-gradient:
 background-image:
 background-repeat:
-Nowrap
+nowrap
 Cross Compile C
 Pip
 recursive case
@@ -1100,13 +1103,11 @@ Exception
 Raise
 "+" Regex
 "." Regex
-Character Class
 Regex: Ranges
 Range Objects
 Whitespace
-strip()
-trim()
-rstrip()
+.strip()
+.rstrip()
 sort() By Key
 sorted()
 ascending=true
@@ -1130,112 +1131,181 @@ Synchronous
 Join Tasks
 Raster
 SVG
-Webp
+WebP
 Repr
-Dangerous Code
 Semantics
 Grammar
 Plumbing of Programming
-Pass by value / reference
-Reference types implications
-black box functions
+Pass by Value/Reference
+Black Box Functions
 Fully Evaluated
-Dynamic Memory management
+Dynamic Memory Management
 Realloc
-garbage values NULL
-How hashing works
-How arrays work
-structs
-linked list
-classes
+How Hashing Works
+How Arrays Work
+Structs
+Classes
 Null Pointer Exception
 Null Check
-void
+Void
 Defense and Testing
-Defensive programming
-Try Catch Exception Finally
+Defensive Programming
+Try-Catch Exception Finally
 Raising Errors
 Dev Docs
-Unit testing frameworks
+Unit Testing Frameworks
 Assertion
 Threading
-Thread safe
+Thread Safe
 Asynchronous
 Race Conditions
 Operating Systems
 Paradigms
-Object oriented programming
-interfaces
-enums
-privacy
+Object-Oriented Programming
+Interfaces
+Enums
+Privacy
 Object Lifetime
 Mutation vs Reassignment
-pass by copy of reference
-inner classes
-lambda functions
-Pure functions
-Hidden variables/ Functions
-Hoisting/ Prototyping
+Inner Classes
+Lambda Functions
+Pure Functions
+Hoisting/Prototyping
 Extern/Export
-Map
-Zip
-ForEach
-Filter
-Code reuse
-members
-constructors
-Getters setters
-dependencies
-Wrapper classes
-dunder methods
-abstract
-Variatic inputs
+Code Reuse
+Members
+Constructors
+Getters/Setters
+Dependencies
+Wrapper Classes
+Dunder Methods
+Abstract
+Variadic Inputs
 Libraries
 Modules
-Open source
-granular control
+Open Source
+Granular Control
 Web Development
 APIs
 Backend
 Frontend
 Django
-Data validation
+Data Validation
 Client
 Server
 Volatile Storage
 Frontend Frameworks
 HTML+CSS
-Box model
 Positioning
 Nested Layouts
 Display Flexbox and Column
 Flex Wrap Shrink Justify
 Relational Databases SQL
-Non-volatile storage
-NoSQL databases
-networking
-blockchain
-statistics
+Non-Volatile Storage
+NoSQL Databases
+Networking
+Blockchain
+Statistics
 Data Science
-Javascript
-Browser localStorage
-number systems
+JavaScript
+Browser LocalStorage
+Number Systems
 JINJA
-templating
-Model View Controller MVC
-Get character
+Templating
+Model-View-Controller MVC
+Get Character
 Uppercase
 Lowercase
 Titlecase
-Compare objects
-Compare Ignore case
-conversion
-concatenate
+Compare Objects
+Compare Ignore Case
+Conversion
+Concatenate
 Overloaded Operators
-substitution
-text blocks
-raw strings
-newline
-charAt()
-compareTo()
-compareToIgnoreCase()
+Substitution
+Text Blocks
+Raw Strings
+Newline
+.charAt()
+.compareTo()
+.compareToIgnoreCase()
+Greedy Matching
+String.trim()
+.replace()
+String.valueOf()
+JavaDocs
+bool
+Boolean Expression
+Boolean Wrapper
+TypeError
+ValueError
+Subclass
+Subclassing Exception
+Compilation
+Compilation Error
+KeyError
+Web Assembly
+jump
+mov
+rdi
+rsi
+Natural Size
+int
+float
+short
+Local Automatic Variable
+Constant
+call
+syscall
+Function Caller
+Messages
+Dereferencing
+Functional
+Object-Oriented
+Structural
+Procedural
+Defensive
+Literate
+Event Driven
+Collaboration Git
+git branch
+git checkout -b
+git log
+git status
+git add
+git diff
+diff
+origin/master
+git pull
+git push
+git clone
+git fork
+Remote Repo
+HEAD Git
+git reset
+git reset origin/master
+Adversarial User
+Empty String
+Datatype Checks
+.isInstance()
+TypeOf Operator
+Errors
+Handling Exceptions
+Checked Exceptions
+Unchecked Exceptions
+Reprompting
+Sass
+.scss
+Sass --watch
+Sass Variables
+Sass Inheritance
+%mySassClass{color:green}
+{%extends layout.html%}
+{%block body%}
+{%endblock%}
+Extends %mySassClass
+Patching Diffs
+Levels of Abstraction
+Iterative Solution
+Recursive Solution
+Cascading Conditions
