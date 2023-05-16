@@ -270,5 +270,4 @@ Wrapped Function , K:V Pairs , Tuples , Create Retrieve Update Delete , HashMap.
 Generators , input() , itertools , Modifying Structure Inplace , char *myString , 
 Idiomatic Langauge , Divide By 0 Error , One to Many Relationship , django-admin startProject , manage.py , 
 python manage.py startapp , python manage.py , Django Project , Atomic Operations , Transactions globals , 
-BEGIN TRANSACTION , StringBuilder , Arrays Wrapper Class , Off-By-One Error , Default Parameters,
-f"hello {planet}" , `helloo ${world}` , printf("%05f")  , "{:15s}".format(myValue) ,
+BEGIN TRANSACTION , StringBuilder , Arrays Wrapper Class , Off-By-One Error , 

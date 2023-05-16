@@ -565,7 +565,6 @@ Commit History
 Straight Through Merge
 Three Way Merge
 Rebasing
-Main
 If __name__ == "main"
 __name__
 Binary Search
@@ -1199,7 +1198,7 @@ HTML+CSS
 Positioning
 Nested Layouts
 Display Flexbox and Column
-Flex Wrap Shrink Justify
+Flex- Wrap Shrink Justify
 Relational Databases SQL
 Non-Volatile Storage
 NoSQL Databases
@@ -1309,3 +1308,57 @@ Levels of Abstraction
 Iterative Solution
 Recursive Solution
 Cascading Conditions
+sprintf()
+rand()
+Stream operators
+cout
+sys.exit(0)
+sys.argv
+app = Flask(__name__)
+Apps
+Routes
+Templates
+CLI Option
+CLI Subcommmand
+Wrapper Function
+Windows API
+include <windows.h>
+GetConsoleWindow() SetConsoleCursorInfo()
+&handle
+std::staticFun("YO");
+cfi.FontFamily Etc. Globals
+Class.coolStaticFunction("foo");
+app = Typer.typer()
+Hashing function
+Min/Max Loops
+Memory Variable
+Storage Variable
+extern
+Automatic Local Variable
+Trade Memory For Speed
+global Declaration
+internal Variable Type
+Wrapped Function
+K:V Pairs
+Tuples
+Create Retrieve Update Delete
+HashMap.keySet()
+Generators
+input()
+itertools
+Modifying Structure Inplace
+char *myString
+Idiomatic Langauge
+Divide By 0 Error
+One to Many Relationship
+django-admin startProject
+manage.py
+python manage.py startapp
+python manage.py
+Django Project
+Atomic Operations
+Transactions globals
+BEGIN TRANSACTION
+StringBuilder
+Arrays Wrapper Class
+Off-By-One Error

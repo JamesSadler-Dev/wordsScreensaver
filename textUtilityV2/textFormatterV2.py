@@ -22,7 +22,7 @@ def command(filename,outputname):
     
     ## Process the text file
     with open(f"{filename}","r") as myFile:
-        lines = [re.split(",",str(line).strip()) for line in myFile]
+        lines = [re.split("\t",str(line).strip()) for line in myFile]
         
         i=0
         while i < len(lines):
@@ -58,9 +58,9 @@ def command(filename,outputname):
         counter=1
 
         for word in words:
-            if len(word) > 1:
-                outputFile.write((str(word).strip()) + " , ") 
-                if (counter % 5 == 0):
+            if len(str(word).strip()) > 1:
+                outputFile.write("{:45s}".format((str(word).strip())) + "    \t    ") 
+                if (counter % 2 == 0):
                     outputFile.write("\n")
                 counter+=1
 
@@ -69,9 +69,9 @@ def command(filename,outputname):
         counter=1
 
         for word in words:
-            if len(word) > 1:
-                outputFile.write((str(word).strip()) + " , ") 
-                if (counter % 5 == 0):
+            if len(str(word).strip()) > 1:
+                outputFile.write("{:45s}".format((str(word).strip())) + "    \t    ") 
+                if (counter % 2 == 0):
                     outputFile.write("\n")
                 counter+=1
     sys.exit(0)    
