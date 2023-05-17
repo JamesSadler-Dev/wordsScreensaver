@@ -491,10 +491,10 @@ Subscript                                        	    Substring()
 Operands                                         	    Logarithms                                       	    
 Side Effects                                     	    Subroutines                                      	    
 Routines                                         	    Methods                                          	    
-Functions                                        	    Self                                             	    
-This                                             	    conn.commit                                      	    
+Functions                                        	    self                                             	    
+this                                             	    conn.commit                                      	    
 conn.close                                       	    Floor Division                                   	    
-Ceil Division                                    	    Round                                            	    
+Ceil Division                                    	    round()                                          	    
 Math Class                                       	    Random.choice() Collections                      	    
 Data Structures                                  	    Exponentiation Operator                          	    
 Rearrangement License                            	    to_csv()                                         	    
@@ -682,4 +682,13 @@ BEGIN TRANSACTION                                	    StringBuilder
 Arrays Wrapper Class                             	    Off-By-One Error                                 	    
 Default Parameters                               	    f"hello {planet}"                                	    
 `helloo ${world}`                                	    printf("%05f",myNum);                            	    
-"{:15s}".format(myValue)                         	    
+"{:15s}".format(myValue)                         	    requirements.txt                                 	    
+app.py                                           	    urls.py                                          	    
+<form action="/route" method="get">              	    Recursive Data Structure                         	    
+Trees                                            	    Shutil module                                    	    
+aparser.add_argument()                           	    aparser.parse_args()                             	    
+functools.reduce()                               	    Subprocess.run()                                 	    
+eval()                                           	    settings.py                                      	    
+touch                                            	    Lexer Tokens                                     	    
+INSTALLED_APPS =                                 	    Color class constants                            	    
+lambda (x) : x * 2                               	    ASCII                                            	    
