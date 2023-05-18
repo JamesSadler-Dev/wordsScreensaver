@@ -60,20 +60,17 @@ def command(filename,outputname):
         for word in words:
             if len(str(word).strip()) > 1:
                 outputFile.write("{:45s}".format((str(word).strip())) + "    \t    ") 
-                if (counter % 2 == 0):
-                    outputFile.write("\n")
+                outputFile.write("\n")
                 counter+=1
 
 
     with open("input.txt","w") as outputFile: 
-        counter=1
 
         for word in words:
             if len(str(word).strip()) > 1:
                 outputFile.write("{:45s}".format((str(word).strip())) + "    \t    ") 
-                if (counter % 2 == 0):
-                    outputFile.write("\n")
-                counter+=1
+                outputFile.write("\n")
+
     sys.exit(0)    
 
 if __name__ == "__main__":

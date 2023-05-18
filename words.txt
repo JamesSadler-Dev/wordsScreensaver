@@ -1,74 +1,74 @@
 Scrapy
-wireshark
-typer
-typehints
-type annotation
-mypy
-command line arguments
+Wireshark
+Typer
+Type Hints
+Annotations
+MyPy
+Command Line Arguments
 Rust
 i32
-fn myFun()
+fn my_fun()
 main()
 lambda
 flex-wrap:
 flex-shrink:
 flex-grow:
-prepend
-.prepend() element
+Prepend
+.prepend() HTML Element
 Requests
 beautifulsoup
-node abstract baseclass
-css selectors
-implement
-document
-innerhtml
-append innerhtml
+Node Abstract Baseclass
+CSS Selectors
+Implementing
+Document
+innerHTML
+append innerHTML
 Complement
-flask
-instantiating python apps
+Flask
+Instantiate Python Apps
 @app.command
 def myClicommand(arg1:int):
-decorator pattern
-webapp
-controller
-view
-route
-post/get
+Decorator Pattern
+Webapp
+Controller
+Views
+Routes
+POST/GET
 <form>
 <input>
 <select>
 <option>
-name attribute
-required
-multiple element selector
-autocomplete attribute
-autofocus attribute
-pseudoclasses
+name Attribute
+required Attribute
+Multiple Element Selector
+autocomplete Attribute
+autofocus Attribute
+Pseudoclasses
 attribute Selector
 id Selector
-Direct descendant selector
-all descendant selector
-viewport
-media queries
-responsive design
+Direct Descendant Selector
+All Descendant Selector
+Viewport
+Media Queries
+Responsive Design
 @media (min/max-width){ color:blue}
-rem measurement
-em measurement
-% measurement
-device width
-screen orientation
-class selector
-code generation
-race condition
+rem Measurement
+em Measurement
+% Measurement
+device-width
+Screen Orientation in Mediaqueries
+Class Selector
+Code Generation
+Race Condition
 async
-interpreter ticks
-signals
+Interpreter Ticks
+Signals
 GIL
-locks
-synchronization techniques
-transactions
-relational db
-non-relational
+Locks
+Synchronization Techniques
+Transactions
+Relational DB
+Non-Relational DB
 SQLite
 INSERT INTO tablename
 VALUES(?)
@@ -78,11 +78,11 @@ Language Constructs
 Subquery
 JOIN this ON this.id= other.this_id;
 UPDATE tablename SET
-Where clause
+Where Clause
 DROP TABLE myTable;
 DELETE FROM myTable;
 matching SQL
-wildcard
+Wildcards
 DISTINCT()
 AVG()
 MIN()
@@ -97,7 +97,7 @@ FOREIGN KEY this.otherid REFERENCES other.id;
 .schema
 .help
 .import
-Find command
+find Command
 -name
 -iname
 -ctime
@@ -109,7 +109,7 @@ updatedb
 app.run(debug=true)
 flask mail
 flask session
-app.config
+app.config["stuff"]
 @app.route("/")
 Methods=["POST" "GET"]
 render_template()
@@ -126,59 +126,58 @@ c.fetch() executed query
 .fetchMany()
 c.fetchAll()
 "use strict"
-Setinterval()
+setInterval()
 setTimeout()
-borrow checker
-semantic elements
-screen readers
-pseudoelement selector
-cascade css
-css specificity
-factoring out commonalities
-separation of concerns
-clientside
-serverside
-javascript frontend
-controllers backend
-MVC model view controller
-business logic
+Borrow Checker
+Semantic Elements
+Screen Readers
+Pseudoelement Selector
+Cascade CSS
+CSS Specificity
+Factoring Out Commonalities
+Separation of Concerns
+Clientside
+Serverside
+Javascript Frontend
+Controllers Backend
+MVC- Model View Controller
+Business Logic
 API
-web services
-graph theory
-edges
-combinatorial
-time complexity
-polynomial
-big O
-theoretical efficiency
-sequential
-flow of control
+Web Services
+Graph Theory
+Edges
+Combinatorial
+Time Complexity
+Polynomial
+Big O
+Theoretical Efficiency
+Sequential
+Flow of Control
 ArrayList<String>
 LinkedList<String>
-list interface
-first class functions
-functional programming
-closures
-hidden outer variable
-granular control with modifiers
-access modifiers
-arrow functions
-Document object model
-Max identifier length
-Case conventions
+List Interface
+First Class Functions
+Functional Programming
+Closures
+Hidden Outer Variable
+Access Modifiers
+Arrow Functions
+DOM- Document Object Model
+Max Identifier Length
+Case Conventions
 Pascal Case
 kebab-case
 camelCase
-exponential runtime
-nested for loop
-labelled break
-fallthrough
+Exponential Runtime
+Nested Loop
+Labelled Break
+Fallthrough
 window.alert()
 console.log()
 new Date()
 .toLocaleString()
-reference types
-Wrapper class
+Reference Types
+Wrapper Class
 document.QuerySelector()
 QuerySelectorAll()
 Heterogenous Containers
@@ -187,225 +186,226 @@ Homogenous Containers
 .parseFloat()
 Formatting Strings
 f-Strings
-template Strings
-cookies
-sessions
-SQL injection attack
-CSS positioning
-headers
-sidebar
+Template Strings
+Cookies
+Sessions
+SQL Injection Attack
+CSS Positioning
+Headers
+Sidebar
 Mutation
 position:fixed
 position:relative
 position:absolute
 position:relative in absolute
-element.value
+.value Attribute
 <nav>
 <div>
 <button>
-events
-accessibility
-guard operator
-guardian pattern
-default operator
-garbage value
-try catch error
-throw new error
-require + revert
-Sybil attack
-Hard fork
+Events
+Accessibility
+Guard Operator &&
+Guardian Pattern
+Default Operator ||
+Garbage Value
+Try-Catch-Error
+throw new error("oof")
+Require + Reverts
+Sybil Attack
+Hard Fork
 git commit
 git merge
-list comprehension
-initialize literals
-dictionary comprehension
-for k\v in dict.items()
+List Comprehension
+Initialize Literals
+Dictionary Comprehension
+for k\v in myDict.items()
 enumerate()
 zip()
 forEach()
 map()
-callback function
-higher order function
-pure function
+Callback Function
+Higher Order Function
+Pure Function
 Stateful
 Stateless
-dynamic
+Dynamic Website
 layout.html
-framework
-Application programming interface
-endpoint
-global variable
-hoisting
-function prototyping
-Extern/export/global declaration
-liskov substitution
-interfaces as types
-slicing
-string representation
-Object comparison
+Frameworks
+Application Programming Interface
+Endpoint
+Global Variable
+Hoisting
+Function Prototyping
+Liskov Substitution
+Interfaces as Types
+Slicing
+String Representation
+Object Comparison
 str()
 add()
 .toString()
 Character.digit()
 re.findall()
 re.search()
-compile pattern
-match object
-Match and extract groups
+Compile Pattern
+Match Object
+Match and Extract Groups
 re.sub()
 split()
 .replaceAll()
 Parity
 JSON
-shorthand property
-shorthand method
-destructuring
+Shorthand Property
+Shorthand Method
+Destructuring
 Superset
-typescript
-transpile
-return type
-linter
-compiler
-machine code
-assembly
+Typescript
+Transpile
+Return Type
+Linter
+Compiler
+Machine Code
+Assembly
 Fortran
-environment variable
+Environment Variable
 OS.environ
 OS module
-OS.path submodule
-public key cryptography
-Type coercion
+OS.path Submodule
+Public Key Cryptography
+Type Coercion
 Data types
-Floating point number
-Integer rollover
+Floating Point Number
+Integer Rollover
 Truncation
-Absolute number
-event loop
-event listener
-property
-attribute
-element
-member
-Idiomatic language
-Design patterns
+Absolute Number
+Event Loop
+Event Listener
+Property
+Attribute
+Element
+Member
+Idiomatic Language
+Design Patterns
 Singleton
 Factory Pattern
-Single point of access
-exit codes
-Real number
-Natural number
-Little gauss formula (n*(n+1))/2
-Procedural programming
-Client expectations
-Start high Negotiating
-Two pointers
+Single Point of Access
+Exit Codes
+Real Number
+Natural Number
+Little Gauss Formula (n*(n+1))/2
+Procedural Programming
+Client Expectations
+Start High Negotiating
+Two Pointers
 Length() - 1
 Developers Docs
 Markdown
 Documenting Functions
 PyTest
-unit testing
-coverage
-Test driven development
+Unit Testing
+Coverage
+Test Driven Development
 CI/CD
-Breaking changes
-comingling
-external stylesheet
-static resources
-heap
-memory management
-recursion
-call stack
-Pass by value
-pass by reference
-pointers
-addresses
-reference count
-value of operator
-address of operator
-garbage collection
+Breaking Changes
+Comingling
+External Stylesheet
+Static Resources
+Heap
+Memory Management
+Recursion
+Call Stack
+Pass by Value
+pass by Reference
+Pointers
+Addresses
+Reference Count
+Value of Operator
+Address of Operator
+Garbage Collection
 Scope
-local inner variables
-shadowing
-data hiding
-private
-inheritance
-non-deterministic
-deterministic
-definite assignment
-Just-in-time compilation
-parse tree
-compiler optimizations
-preprocessor directives
+Local Inner Variables
+Shadowing
+Data Hiding
+Private
+Inheritance
+Non-Deterministic
+Deterministic
+Definite Assignment
+Just-in-Time Compilation
+Parse Tree
+Compiler Optimizations
+Preprocessor Directives
 #include
-header files
-runtime libraries
-Index of
-last Index of
+Header Files
+Runtime Libraries
+Index Of
+last Index Of
 index()
 rindex()
 array.reduce()
 array.splice()
-multiple inheritance
-diamond inheritance problem
-K+R style
-concurrency
-parallelism
+Multiple Inheritance
+Diamond Inheritance Problem
+K+R Style
+Concurrency
+Parallelism
 #define
 Constants
 const
-reassignment
+final
+Reassignment
 Object.freeze()
-bracket notation
-dot notation
-Character arrays
-strings as objects
-pandas
-money math
-numpy
-floating point imprecision
-precision
-redis DB
+Bracket Notation
+Dot Notation
+Character Arrays
+Strings as Objects
+Pandas
+Money Math
+Numpy
+Floating Point Imprecision
+Precision
+Redis DB
 Array.push()
 array.pop()
-stack
-queue
+Stack
+Queue
 LIFO
 FIFO
-doubly linked list
+Doubly Linked List
 Linked List
-reverse linked list
-structured programming
+Reverse Linked List
+Structured Programming
 Goto/label/break
 OS.getcwd()
-interface
+Interface
 super()
 this()
-constructor
+Constructor
+constructor()
 __init__()
 __init__.py
-Java project
-fully qualified name
-Fully qualified domain
-subdomain
-top level domain
-clean URL
+Java Project
+Fully Qualified Name
+Fully Qualified Domain
+Subdomain
+Top Level Domain
+Clean URL
 URI
-implicit coercion
-number base systems
-string concatenation
-overloading
-overriding
-concrete implementation
-coupling
-polymorphism
-dynamic polymorphism
-Runtime errors
-length method vs property
-unicode
+Implicit Coercion
+Number Base Systems
+String Concatenation
+Overloading
+Overriding
+Concrete Implementation
+Coupling
+Polymorphism
+Dynamic Polymorphism
+Runtime Errors
+Length Method vs Property
+Unicode
 UTF-8
 HTML Entities
-css box model
+CSS Box Model
 box sizing: border-box
 Evaluation
 Declaration
@@ -437,24 +437,24 @@ Font-weight:500
 <hr>
 <br>
 &nbsp
-hex
-radix
-black box methods
-Dont repeat yourself
-method chaining
+Hex
+Radix
+Black Box Methods
+Dont Repeat Yourself
+Method Chaining
 <a href>
 <html>
-css reset
+CSS Reset
 requests.get(link)
 None
 undefined
 NULL
-sentinel character
-Disabled attribute
+Sentinel Character
+disabled Attribute
 B-trees
-binary search tree
-red black trees
-balancing trees
+Binary Search Tree
+Red Black Trees
+Balancing Trees
 *node
 struct
 typedef
@@ -878,7 +878,6 @@ gunzip
 vim
 apt install
 Globbing
-Wildcards
 Streams API
 Lambda Implementation FunctionalInterface
 XDG-open
@@ -987,8 +986,8 @@ Methods
 Functions
 self
 this
-conn.commit
-conn.close
+conn.commit()
+conn.close()
 Floor Division
 Ceil Division
 round()
@@ -1051,7 +1050,6 @@ Augmented Operators
 Dunder Method
 Assignment Operator
 Logical Operators
-Variatic Input
 Parameters
 Arguments
 Abstraction
@@ -1134,7 +1132,7 @@ WebP
 Repr
 Semantics
 Grammar
-Plumbing of Programming
+Low Level Plumbing
 Pass by Value/Reference
 Black Box Functions
 Fully Evaluated
@@ -1286,7 +1284,7 @@ git reset origin/master
 Adversarial User
 Empty String
 Datatype Checks
-.isInstance()
+isInstance(userInput,String)
 TypeOf Operator
 Errors
 Handling Exceptions
@@ -1300,15 +1298,15 @@ Sass Variables
 Sass Inheritance
 %mySassClass{color:green}
 {%extends layout.html%}
-{%block body%}
-{%endblock%}
+{% block body %}
+{% endblock %}
 Extends %mySassClass
 Patching Diffs
 Levels of Abstraction
 Iterative Solution
 Recursive Solution
 Cascading Conditions
-sprintf()
+sprintf(BufferToStoreIn,"%5s" ,userString);
 rand()
 Stream operators
 cout
@@ -1316,7 +1314,6 @@ sys.exit(0)
 sys.argv
 app = Flask(__name__)
 Apps
-Routes
 Templates
 CLI Option
 CLI Subcommmand
@@ -1377,7 +1374,7 @@ Shutil module
 aparser.add_argument()
 aparser.parse_args()
 functools.reduce()
-Subprocess.run()
+subprocess.run()
 eval()
 settings.py
 touch
@@ -1386,3 +1383,63 @@ INSTALLED_APPS =
 Color class constants
 lambda (x) : x * 2
 ASCII
+snake_case
+fn my_cool_fun(my_int:i32){ println!(my_int);}
+user@domain$
+export MYVAR="cool"
+exec()
+os.name
+soup = BeautifulSoup()
+Instantiation
+String my2dArray[][] = {{"Hello"},{"There"}};
+let cool = { "foo" : "bar" };
+const MY_JS_CONST = 12345;
+public final int CALCULATION_CONST=12345;
+Anonymous Function
+References to Class+Instance
+With open("file1.txt","w") as filehandle:
+Finally: Conn.close()
+Join Table
+final Class CoolFinalClass{}
+import pandas as pd
+from flask import render_template
+Linear Search
+Abstract Data Structure
+Strict Inequality Operator
+Switch Statement
+Switch Expression
+Match Statement
+return (booleanExpression);
+if (FunctionTrue) { console.log("true");}
+struct node { *node; char *data;}
+x if (x > y) else y
+(x > y) ? x : y;
+Nested Ternary Operator
+do {console.log(i); i++;}while(i < 10)
++= , ++ , -= , -- , *=
+Using Before Assignment
+Block Scope
+function myFunc(...args){
+Work Unit
+Jupyter Notebooks
+Ruff
+Major Versions
+Development Branch
+std::cout << "cooool" << \n;
+Ungetch()
+Modulus %
+case "abcdefg"
+while (true):
+Nested Destructuring
+get name(){ return(_name);}
+set name(name){ _name=name;}
+@property
+@<propertyName>.setter
+_property
+def myFun(myInt:int): => int
+import * as capStrings from "cap_strings"
+MSYS2
+G++
+int main(int argc, char *argv){}
+tasks.json
+<include iostream>

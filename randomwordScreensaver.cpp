@@ -94,7 +94,7 @@ int main()
     setConsoleFullscreen();
     srand(time(0));
     vector<string> words;
-    string word;
+    string word = "";
     ifstream file("words.txt");
     char outputWord[100];
 
@@ -112,8 +112,8 @@ int main()
     int xlCutoff = 17;
     int randomBuffer1;
     int randomBuffer2;
-    string signalType;
-    string past;
+    string signalType = "";
+    string past = "";
     // screensaver loop
     while (true)
     {
@@ -121,7 +121,7 @@ int main()
         int randomIndex = rand() % words.size();
         
         //guardian pattern
-        if (words[randomIndex].length() < 1){
+        if (words[randomIndex].length() < 2){
             continue;
         }
 
