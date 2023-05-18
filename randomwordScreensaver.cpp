@@ -8,7 +8,6 @@
 #include <thread>
 #include <windows.h>
 
-// BUG : "..." in string, 
 
 using namespace std;
 
@@ -110,19 +109,20 @@ int main()
     int padleftShortOneLineMin = 10;
     int padleftTinyMax= 6;
     int xlCutoff = 17;
-    int randomBuffer1;
-    int randomBuffer2;
+    int randomBuffer1= 0;
+    int randomBuffer2= 0;
     string signalType = "";
     string past = "";
     // screensaver loop
     while (true)
     {
-        system("cls");
+
+        //these prevent us from having to recalculate in the loop needlessly
         int randomIndex = rand() % words.size();
-        
         string current = words[randomIndex];
         int totalLen= current.length();
         const char* totalCArray = current.c_str();
+
         //guardian pattern
         if (totalLen < 2){
             continue;
@@ -354,7 +354,7 @@ int main()
             }
 
         }
-
+        system("cls");
         randomBuffer1 = (rand() % 4) + 4;
         randomBuffer2 = (rand() % 3) + 1;
 
