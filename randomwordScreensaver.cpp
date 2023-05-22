@@ -95,24 +95,32 @@ int main()
     vector<string> words;
     string word = "";
     ifstream file("words.txt");
-    char outputWord[100];
 
+    char outputWord[100];
+    //let's initialize some values
+    for (int i = 0 ; i < 1 ; i++){
+        outputWord[i] = 0;
+    }
 
     while (getline(file, word))
     {
         words.push_back(word);
     }
     
+    //lengths to set conditions with
     int wraplen = 18;
     int padleftLongMin = 13;
     int padleftShortMin = 13;
     int padleftShortOneLineMin = 10;
     int padleftTinyMax= 6;
     int xlCutoff = 17;
+    //
     int randomBuffer1= 0;
     int randomBuffer2= 0;
     string signalType = "";
     string past = "";
+
+
     // screensaver loop
     while (true)
     {
@@ -124,12 +132,12 @@ int main()
         const char* totalCArray = current.c_str();
 
         //guardian pattern
-        if (totalLen < 2){
+        if (totalLen < 2 || current.find_first_of("") == 0){
             continue;
         }
 
         // Skip repeats
-        if (!past.empty()){
+        if (!past.empty() || past == ""){
             if (totalCArray == past) {
                 continue;
             } else {
@@ -354,6 +362,8 @@ int main()
             }
 
         }
+
+
         system("cls");
         randomBuffer1 = (rand() % 4) + 4;
         randomBuffer2 = (rand() % 3) + 1;

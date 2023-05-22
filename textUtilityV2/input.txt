@@ -148,7 +148,7 @@ Graph Theory
 Edges                                            	    
 Combinatorial                                    	    
 Time Complexity                                  	    
-Polynomial                                       	    
+Polynomial Runtime                               	    
 Big O                                            	    
 Theoretical Efficiency                           	    
 Sequential                                       	    
@@ -234,6 +234,7 @@ Frameworks
 Application Programming Interface                	    
 Endpoint                                         	    
 Global Variable                                  	    
+Global Scope                                     	    
 Hoisting                                         	    
 Function Prototyping                             	    
 Liskov Substitution                              	    
@@ -339,7 +340,7 @@ Preprocessor Directives
 Header Files                                     	    
 Runtime Libraries                                	    
 Index Of                                         	    
-last Index Of                                    	    
+Last Index Of                                    	    
 index()                                          	    
 rindex()                                         	    
 array.reduce()                                   	    
@@ -461,7 +462,7 @@ typedef
 switch                                           	    
 case                                             	    
 break                                            	    
-Default                                          	    
+default:                                         	    
 Null Pointer Error                               	    
 Dangling Pointer                                 	    
 Memory Leak                                      	    
@@ -653,7 +654,7 @@ I/O bound
 CPU Bound                                        	    
 Amdahls Law                                      	    
 Association Lists                                	    
-venv                                             	    
+Venv                                             	    
 import                                           	    
 Subpackages                                      	    
 Syntax Error                                     	    
@@ -739,7 +740,7 @@ JavaFX
 Java Swing                                       	    
 JFrame                                           	    
 Window Object                                    	    
-GUI programs                                     	    
+GUI Programs                                     	    
 Blob SQL                                         	    
 Text SQL                                         	    
 text NOT NULL                                    	    
@@ -889,6 +890,8 @@ History Command
 clear                                            	    
 cls                                              	    
 History Expansions                               	    
+Path Expansions                                  	    
+Wildcard Expansions                              	    
 Root Directory /                                 	    
 ~ Linux                                          	    
 /home                                            	    
@@ -1121,8 +1124,8 @@ O(n)
 O(1)                                             	    
 O(nlogn)                                         	    
 O(logn)                                          	    
-Sublinear                                        	    
-Quasilinear                                      	    
+Sublinear Runtime                                	    
+Quasilinear Runtime                              	    
 Specification                                    	    
 Synchronous                                      	    
 Join Tasks                                       	    
@@ -1145,7 +1148,6 @@ Classes
 Null Pointer Exception                           	    
 Null Check                                       	    
 Void                                             	    
-Defense and Testing                              	    
 Defensive Programming                            	    
 Try-Catch Exception Finally                      	    
 Raising Errors                                   	    
@@ -1261,8 +1263,6 @@ Functional
 Object-Oriented                                  	    
 Structural                                       	    
 Procedural                                       	    
-Defensive                                        	    
-Literate                                         	    
 Event Driven                                     	    
 Collaboration Git                                	    
 git branch                                       	    
@@ -1309,7 +1309,9 @@ Cascading Conditions
 sprintf(BufferToStoreIn,"%5s" ,userString);      	    
 rand()                                           	    
 Stream operators                                 	    
-cout                                             	    
+std::cout                                        	    
+std::end                                         	    
+std::endl                                        	    
 sys.exit(0)                                      	    
 sys.argv                                         	    
 app = Flask(__name__)                            	    
@@ -1445,4 +1447,117 @@ tasks.json
 <include iostream>                               	    
 Code Smells                                      	    
 .c_str()                                         	    
-const char *stuff                                	    
+const char* stuff                                	    
+Null Termination \0                              	    
+Positional Arguments                             	    
+Keyword Arguments                                	    
+INSERT INTO coolTable (col1,col2) VALUES (?,?);    	    
+OS.path.join("/")                                	    
+Path Seperator                                   	    
+Uninitialized Variable                           	    
+Default Values                                   	    
+echo "cool.txt" > sort | uniq                    	    
+== myStr.trim().toUpperCase();                   	    
+Modal Dialog Box                                 	    
+<dialog>                                         	    
+<strong>                                         	    
+element.classlist.add(".coolButton");            	    
+element.classlist.remove();                      	    
+en-US                                            	    
+en-UK                                            	    
+Locales                                          	    
+.toLocaleString("percent")                       	    
+.toLocaleString("measurement")                   	    
+Scalability                                      	    
+Quotient                                         	    
+Divide and Conquer                               	    
+Algorithmic Thinking                             	    
+Running Time                                     	    
+Order of Growth                                  	    
+Ammortized Constant                              	    
+True Insert                                      	    
+Aliases                                          	    
+Successive Values                                	    
+slice = myList[1:5]                              	    
+Incurred Cost                                    	    
+Magic Numbers                                    	    
+Hard to Understand Tests                         	    
+Type Casting                                     	    
+Argument Count                                   	    
+Argument Vector                                  	    
+Double Quotes vs SingleQuotes                    	    
+Big Omega                                        	    
+Typedef Struct                                   	    
+Dominant Factors                                 	    
+0x                                               	    
+Orphaning Nodes                                  	    
+Insert into Arraylist /LinkedList                	    
+Fields                                           	    
+Subtrees                                         	    
+Red Nodes / Black Nodes                          	    
+print("1234",end="\n")                           	    
+Self Documenting Code                            	    
+80/20 Rule                                       	    
+STDIN                                            	    
+STDOUT                                           	    
+STDERR                                           	    
+Parent Process                                   	    
+Empty Block / Pass                               	    
+Sys Time                                         	    
+element.addEventListener("click",callbackFn);    	    
+python -m                                        	    
+pip list                                         	    
+python -m venv .coolVenv                         	    
+Fast and Slow Pointer                            	    
+Comparison Operations                            	    
+.size()                                          	    
+.keys() , .values()                              	    
+Tech Stack                                       	    
+{k.upper():v.upper() for k,v in cool.items()}    	    
+Autoboxing Unboxing                              	    
+Macros                                           	    
+Event e                                          	    
+Tailwind                                         	    
+Namespaces                                       	    
+Commit Message                                   	    
+GPLv3                                            	    
+Buckets                                          	    
+mail.send(message)                               	    
+Flag Variable                                    	    
+Session Dictionary                               	    
+"In" Python                                      	    
+Array Name                                       	    
+Line wrap                                        	    
+Subnet Masks                                     	    
+Docstrings                                       	    
+Function Docstring Documentation                 	    
+Class Docstring Documentation                    	    
+/* Im a multi-line comment*/                     	    
+Refactoring                                      	    
+capture output subprocess                        	    
+Communitive Operators                            	    
+Associative Operators                            	    
+Binary Operators                                 	    
+contract CoolStuff is ERC721                     	    
+tablename (col1,col2,?)                          	    
+coolWebappSql.db                                 	    
+x = loggedIn && userName                         	    
+System.In                                        	    
+new Scanner(System.In)                           	    
+line.substr(startIn,length);                     	    
+line.find("lol",startIndex);                     	    
+#include <cmath>                                 	    
+fmax()                                           	    
+fmin()                                           	    
+cin >> myInt                                     	    
+getline(cin , username)                          	    
+std::cin                                         	    
+int[] myJavaArray                                	    
+int myCppArray[]                                 	    
+Hardcoded Variables                              	    
+Function Signature
+Function Stub 
+Nested CSS Sass
+Session Timeout
+Character Sets 
+ 
