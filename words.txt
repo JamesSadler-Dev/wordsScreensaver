@@ -1555,3 +1555,10 @@ std::cin
 int[] myJavaArray
 int myCppArray[]
 Hardcoded Variables
+Function Signature
+Function Stub
+Nested CSS Sass
+Session Timeout
+Character Sets
+abc- abstractbaseclass python
+@abc.abstractmethod

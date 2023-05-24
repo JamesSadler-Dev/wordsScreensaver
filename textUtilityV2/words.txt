@@ -1452,7 +1452,7 @@ Null Termination \0
 Positional Arguments
 Keyword Arguments
 INSERT INTO coolTable (col1,col2) VALUES (?,?);
-OS.path.join("/")
+OS.path.join(path)
 Path Seperator
 Uninitialized Variable
 Default Values
@@ -1555,3 +1555,27 @@ std::cin
 int[] myJavaArray
 int myCppArray[]
 Hardcoded Variables
+Function Signature
+Function Stub
+Nested CSS Sass
+Session Timeout
+Character Sets
+@abc.abstractmethod
+Invalid State
+Class MyAbstractBase(ABC):
+Comma Operator
+Pointer Variable
+int *myPointer = &thing;
+std::string
+namespace coool{}
+Class Cool{ public: int CoolInt=1234;}
+Modifiers + Custom Keywords
+Private:
+Disassembler
+Obfuscating Code
+dis.dis()
+API Call
+Decompiler
+os.chdir()
+os.rmdir()
+os.mkdir()
