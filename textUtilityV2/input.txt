@@ -16,7 +16,7 @@ flex-grow:
 Prepend                                          	    
 .prepend() HTML Element                          	    
 Requests                                         	    
-beautifulsoup                                    	    
+BeautifulSoup                                    	    
 Node Abstract Baseclass                          	    
 CSS Selectors                                    	    
 Implementing                                     	    
@@ -111,7 +111,7 @@ flask mail
 flask session                                    	    
 app.config["stuff"]                              	    
 @app.route("/")                                  	    
-Methods=["POST" "GET"]                           	    
+Methods=["POST","GET"]                           	    
 render_template()                                	    
 request.args.get()                               	    
 request.forms.get()                              	    
@@ -260,7 +260,7 @@ Shorthand Property
 Shorthand Method                                 	    
 Destructuring                                    	    
 Superset                                         	    
-Typescript                                       	    
+TypeScript                                       	    
 Transpile                                        	    
 Return Type                                      	    
 Linter                                           	    
@@ -585,7 +585,7 @@ Discrete Math
 Induction                                        	    
 Correctness                                      	    
 Quadratic Runtime                                	    
-Sqrt Newton formula                              	    
+Sqrt Newton Formula                              	    
 Double                                           	    
 Long                                             	    
 Scientific Notation                              	    
@@ -807,7 +807,7 @@ Append Mode
 Read Mode                                        	    
 wc                                               	    
 uniq                                             	    
-count                                            	    
+sort                                             	    
 uniq -c                                          	    
 Piping                                           	    
 Pipelines                                        	    
@@ -1094,7 +1094,7 @@ background-repeat:
 nowrap                                           	    
 Cross Compile C                                  	    
 Pip                                              	    
-recursive case                                   	    
+recursive Case                                   	    
 Base Case                                        	    
 Infinite Loop                                    	    
 Infinite Recursion                               	    
@@ -1140,7 +1140,6 @@ Pass by Value/Reference
 Black Box Functions                              	    
 Fully Evaluated                                  	    
 Dynamic Memory Management                        	    
-Realloc                                          	    
 How Hashing Works                                	    
 How Arrays Work                                  	    
 Structs                                          	    
@@ -1534,7 +1533,7 @@ Function Docstring Documentation
 Class Docstring Documentation                    	    
 /* Im a multi-line comment*/                     	    
 Refactoring                                      	    
-capture output=true                       	    
+capture output=true                              	    
 Communitive Operators                            	    
 Associative Operators                            	    
 Binary Operators                                 	    
@@ -1579,3 +1578,11 @@ Decompiler
 os.chdir()                                       	    
 os.rmdir()                                       	    
 os.mkdir()                                       	    
+Index Error                                      	    
+Namespace Entities                               	    
+using namespace std;                             	    
+for (int i = 0 , int j = 1 ;                     	    
+Cipher                                           	    
+Ciphertext                                       	    
+Plaintext                                        	    
+Namespace Resolution Operator                    	    
