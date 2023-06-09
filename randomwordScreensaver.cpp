@@ -23,12 +23,12 @@ const char *col5= "\u001b[31m";
 const char *col6= "\u001b[95m";
 const char *col7= "\u001b[33m";
 //lengths to set conditions with
-int wraplen = 18;
-int padleftLongMin = 13;
-int padleftShortMin = 13;
-int padleftShortOneLineMin = 10;
-int padleftTinyMax= 6;
-int xlCutoff = 17;
+const int wraplen = 18;
+const int padleftLongMin = 13;
+const int padleftShortMin = 13;
+const int padleftShortOneLineMin = 10;
+const int padleftTinyMax= 6;
+const int xlCutoff = 17;
 
 /*
 wordsScreensaver Main Loop
