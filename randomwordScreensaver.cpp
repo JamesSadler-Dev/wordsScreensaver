@@ -15,8 +15,24 @@ void printBuffer(int n);
 
 using namespace std;
 
+const char *col1 = "\u001b[35m";
+const char *col2= "\u001b[32m";
+const char *col3= "\u001b[34m";
+const char *col4= "\u001b[97m";
+const char *col5= "\u001b[31m";
+const char *col6= "\u001b[95m";
+const char *col7= "\u001b[33m";
+//lengths to set conditions with
+int wraplen = 18;
+int padleftLongMin = 13;
+int padleftShortMin = 13;
+int padleftShortOneLineMin = 10;
+int padleftTinyMax= 6;
+int xlCutoff = 17;
 
-/*Screensaver Loop*/
+/*
+wordsScreensaver Main Loop
+*/
 int main(){
 
     setfontsize(135);
@@ -37,25 +53,13 @@ int main(){
         words.push_back(word);
     }
     
-    //lengths to set conditions with
-    int wraplen = 18;
-    int padleftLongMin = 13;
-    int padleftShortMin = 13;
-    int padleftShortOneLineMin = 10;
-    int padleftTinyMax= 6;
-    int xlCutoff = 17;
+
     //
     int randomBuffer1= 0;
     int randomBuffer2= 0;
     string signalType = "";
     string past = "";
-    const char *col1 = "\u001b[35m";
-    const char *col2= "\u001b[32m";
-    const char *col3= "\u001b[34m";
-    const char *col4= "\u001b[97m";
-    const char *col5= "\u001b[31m";
-    const char *col6= "\u001b[95m";
-    const char *col7= "\u001b[33m";
+
 
     // screensaver loop
     while (true)
