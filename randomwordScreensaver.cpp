@@ -24,11 +24,12 @@ const char *col6= "\u001b[95m";
 const char *col7= "\u001b[33m";
 //lengths to set conditions with
 const int wraplen = 18;
-const int xlCutoff = 17;
-const int padleftLongMin = 15;
-const int padleftShortMin = 13;
-const int padleftShortOneLineMin = 10;
-const int padleftTinyMax= 6;
+const int padxxlMin = 19;
+const int padxlMin = 17;
+const int padLongMin = 15;
+const int padShortMin = 13;
+const int padShorterMin = 10;
+const int padTinyMin= 6;
 
 
 /*
@@ -77,7 +78,7 @@ int main(){
             continue;
         }
 
-        // Skip repeats
+        // Skip repeats one time
         if (!past.empty() || past == ""){
             if (totalWordArr == past) {
                 continue;
@@ -107,10 +108,10 @@ int main(){
                 */
             if (indexOfSpace == -1){
                 //extra padding if it's too long
-                if (totalLen > 19){
+                if (totalLen > padxxlMin){
                     sprintf(outputWord, "%s%23s",col1, totalWordArr);
                     signalType="2a";
-                } else if (totalLen > padleftLongMin){
+                } else if (totalLen > padLongMin){
                     sprintf(outputWord, "%s%21s",col1, totalWordArr);
                     signalType="2b";    
                 } else {
@@ -134,10 +135,10 @@ int main(){
                 /* CASE 3: 
                 *    IF FIRSTPART IS LONGER THAN LONG CUTOFF
                 */
-                if (fpLength > padleftLongMin){
+                if (fpLength > padLongMin){
                     // LONG FIRSTPART --- SHORT LASTPART
-                    if (lpLength < padleftTinyMax) {
-                        if (fpLength > xlCutoff + 2){
+                    if (lpLength < padTinyMin) {
+                        if (fpLength > padxxlMin){
                             sprintf(outputWord, "%s%22s\n%14s",col2, p1Array , p2Array);
                             signalType="3a";
                         } else {
@@ -146,7 +147,7 @@ int main(){
                         }
                         
                     // FIRSTPART LONGER THAN LONG CUTOFF AND SHORTER THAN XLCUTOFF -- NORMAL LASTPART
-                    } else if (fpLength < xlCutoff){
+                    } else if (fpLength < padxlMin){
                         //DON'T PAD LASTPART AS MUCH IF IT's TOO SHORT
                         if (lpLength < 9){
                             sprintf(outputWord, "%s%19s\n%16s",col2, p1Array , p2Array);
@@ -162,8 +163,8 @@ int main(){
                             sprintf(outputWord, "%s%s",col2, totalWordArr);
                             signalType="3e";
                         // long first part and long last part   
-                        } else if (fpLength > 20){
-                            if (lpLength > xlCutoff){
+                        } else if (fpLength > padxxlMin + 1){
+                            if (lpLength > padxlMin){
                                 sprintf(outputWord, "%s%22s\n%21s",col2, p1Array , p2Array);
                                 signalType="3f";
                             } else {
@@ -171,12 +172,12 @@ int main(){
                                 signalType="3g";
                             }
                         // long firstpart and lastpart
-                        } else if (lpLength > xlCutoff + 1){
+                        } else if (lpLength > padxlMin + 1){
                             sprintf(outputWord, "%s%21s\n%22s",col2, p1Array , p2Array);
                             signalType="3h";
                         
                         // lastpart too short print normally
-                        } else if (lpLength < padleftTinyMax){
+                        } else if (lpLength < padTinyMin){
                             sprintf(outputWord, "%s%s",col2, totalWordArr);
                             signalType="3i";
                         } else if (lpLength < 9){
@@ -191,8 +192,8 @@ int main(){
                     /* CASE 4: 
                     *    IF FIRSTPART IS LONGER THAN SHORT CUTOFF
                     */
-                } else if (fpLength > padleftShortMin ) {
-                    if (lpLength < padleftTinyMax) {
+                } else if (fpLength > padShortMin ) {
+                    if (lpLength < padTinyMin) {
                         sprintf(outputWord, "%s%19s\n%14s",col1, p1Array , p2Array);
                         signalType="4a";
                     //DON'T PAD LASTPART AS MUCH IF IT's TOO SHORT
@@ -209,16 +210,16 @@ int main(){
                     *    IF FIRSTPART IS SHORTER THAN PAD LONG OR SHORT CUTOFF
                     * 
                     */
-                } else if (fpLength < padleftShortMin) {
+                } else if (fpLength < padShortMin) {
                     
                     if (fpLength == lpLength){
                         sprintf(outputWord, "%s%16s\n%16s",col1, p1Array , p2Array);
                         signalType="5a";
-                    } else if (fpLength <= padleftTinyMax) {
-                        if (lpLength > xlCutoff + 2){
+                    } else if (fpLength <= padTinyMin) {
+                        if (lpLength > padxlMin + 2){
                             sprintf(outputWord, "%s%14s\n%23s",col1, p1Array , p2Array);
                             signalType="5b";
-                        }else if (lpLength > padleftLongMin){
+                        }else if (lpLength > padLongMin){
                             sprintf(outputWord, "%s%14s\n%19s",col1, p1Array , p2Array);
                             signalType="5c";
                         }
@@ -233,7 +234,7 @@ int main(){
                         signalType="5e";
                     
                     //If LASTPART is LESS than tiny or medium cutoff
-                    } else if (lpLength < padleftTinyMax){
+                    } else if (lpLength < padTinyMin){
                         sprintf(outputWord, "%s%16s\n%13s",col2, p1Array , p2Array);  
                         signalType="5f";
                            
@@ -243,7 +244,7 @@ int main(){
                         signalType="5g";
      
                     } else if (fpLength >= 11){ 
-                        if (lpLength > xlCutoff){
+                        if (lpLength > padxlMin){
                             sprintf(outputWord, "%s%17s\n%20s",col2, p1Array , p2Array); 
                             signalType="5h";    
                             } else {
@@ -251,7 +252,7 @@ int main(){
                             signalType="5i";  
                             }    
                     } else if (fpLength >= 9){
-                            if (lpLength > xlCutoff){
+                            if (lpLength > padxlMin){
                                 sprintf(outputWord, "%s%16s\n%23s",col2, p1Array , p2Array);  
                                 signalType="5j";   
                             } else if (lpLength >= 11) {
@@ -262,7 +263,7 @@ int main(){
                                 signalType="5h";
                             }
                     // if LASTPART is LONGER than padding cutoff
-                    } else if (lpLength > padleftShortMin){
+                    } else if (lpLength > padShortMin){
                         sprintf(outputWord, "%s%16s\n%21s",col2, p1Array , p2Array);      
                         signalType="5l";   
                     } else {
@@ -279,22 +280,22 @@ int main(){
         * 
         */
         else  {
-            if (totalLen > xlCutoff){
+            if (totalLen > padxlMin){
                 sprintf(outputWord, "%s%21s",col3, totalWordArr);
                 signalType = "za";
-            } else if (totalLen > padleftLongMin){
+            } else if (totalLen > padLongMin){
                 sprintf(outputWord, "%s%20s",col3, totalWordArr);
                 signalType = "zb";
-            } else if (totalLen > padleftShortMin){
+            } else if (totalLen > padShortMin){
                 sprintf(outputWord, "%s%19s",col5, totalWordArr);
                 signalType = "zb";
-            } else if (totalLen > padleftShortOneLineMin){
+            } else if (totalLen > padShorterMin){
                 sprintf(outputWord, "%s%17s",col6, totalWordArr);
                 signalType = "zc";
-            } else if (totalLen < padleftTinyMax) {
+            } else if (totalLen < padTinyMin) {
                 sprintf(outputWord, "%s%13s",col7, totalWordArr);
                 signalType = "zd";
-            } else if (totalLen > 10) {
+            } else if (totalLen > padShorterMin) {
                 sprintf(outputWord, "%s%16s",col4, totalWordArr);
                 signalType = "ze";
             } else {
