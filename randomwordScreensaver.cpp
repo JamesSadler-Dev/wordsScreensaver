@@ -24,11 +24,12 @@ const char *col6= "\u001b[95m";
 const char *col7= "\u001b[33m";
 //lengths to set conditions with
 const int wraplen = 18;
-const int padleftLongMin = 13;
+const int xlCutoff = 17;
+const int padleftLongMin = 15;
 const int padleftShortMin = 13;
 const int padleftShortOneLineMin = 10;
 const int padleftTinyMax= 6;
-const int xlCutoff = 17;
+
 
 /*
 wordsScreensaver Main Loop
@@ -109,7 +110,7 @@ int main(){
                 if (totalLen > 19){
                     sprintf(outputWord, "%s%23s",col1, totalWordArr);
                     signalType="2a";
-                } else if (totalLen > 15){
+                } else if (totalLen > padleftLongMin){
                     sprintf(outputWord, "%s%21s",col1, totalWordArr);
                     signalType="2b";    
                 } else {
@@ -133,7 +134,7 @@ int main(){
                 /* CASE 3: 
                 *    IF FIRSTPART IS LONGER THAN LONG CUTOFF
                 */
-                if (fpLength > padleftLongMin + 2){
+                if (fpLength > padleftLongMin){
                     // LONG FIRSTPART --- SHORT LASTPART
                     if (lpLength < padleftTinyMax) {
                         if (fpLength > xlCutoff + 2){
@@ -278,13 +279,13 @@ int main(){
         * 
         */
         else  {
-            if (totalLen > padleftLongMin + 4){
+            if (totalLen > xlCutoff){
                 sprintf(outputWord, "%s%21s",col3, totalWordArr);
                 signalType = "za";
-            } else if (totalLen > padleftLongMin + 2){
+            } else if (totalLen > padleftLongMin){
                 sprintf(outputWord, "%s%20s",col3, totalWordArr);
                 signalType = "zb";
-            } else if (totalLen > padleftLongMin){
+            } else if (totalLen > padleftShortMin){
                 sprintf(outputWord, "%s%19s",col5, totalWordArr);
                 signalType = "zb";
             } else if (totalLen > padleftShortOneLineMin){

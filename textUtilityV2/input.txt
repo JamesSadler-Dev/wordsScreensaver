@@ -21,8 +21,7 @@ Node Abstract Baseclass
 CSS Selectors                                    	    
 Implementing                                     	    
 Document                                         	    
-innerHTML                                        	    
-append innerHTML                                 	    
+innerHTML                                        	                                  	    
 Complement                                       	    
 Flask                                            	    
 Instantiate Python Apps                          	    
