@@ -1,14 +1,15 @@
 import sys
 import re
 
+
 def main():
     command(sys.argv[1],sys.argv[2])
 
-def command(filename,outputname):
+
+def command(filename:str,outputname:str):
     words= []
     filename= str(filename)
     outputname = str(outputname)
-    wordsSet= set()
     duplicates= set()
     seen = set()
 
@@ -52,34 +53,20 @@ def command(filename,outputname):
             i+=1
 
 
-    with open(outputname,"w") as outputFile: 
-        for word in words:
-            if len(word) > 1:
-                outputFile.write((str(word).strip()) + "\n")
-
-    with open("duplicates.txt","w") as outputFile: 
-        for word in duplicates:
-            if len(word) > 1:
-                outputFile.write((str(word).strip()) + "\n")   
-
-    with open("masterListBackup.txt","w") as outputFile: 
-        counter=1
-
-        for word in words:
-            if len(str(word).strip()) > 1:
-                outputFile.write("{:45s}".format((str(word).strip())) + "    \t    ") 
-                outputFile.write("\n")
-                counter+=1
-
-
-    with open("input.txt","w") as outputFile: 
-
-        for word in words:
-            if len(str(word).strip()) > 1:
-                outputFile.write("{:45s}".format((str(word).strip())) + "    \t    ") 
-                outputFile.write("\n")
+    writeFile(f"{outputname}",words)
+    writeFile("duplicates.txt",duplicates)
+    writeFile("backup.txt",words)
+    writeFile("input.txt",words)
 
     sys.exit(0)    
+
+
+def writeFile(fileName:str,words:list):
+    with open(fileName,"w") as outputFile: 
+        for word in words:
+            word = str(word).strip()
+            if len(word) > 1:
+                outputFile.write("{:s}{:s}".format(word,"\t\n"))
 
 if __name__ == "__main__":
     main()
