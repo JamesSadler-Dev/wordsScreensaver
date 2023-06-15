@@ -22,27 +22,35 @@ def command(filename,outputname):
     
     ## Process the text file
     with open(f"{filename}","r") as myFile:
-        lines = [re.split(",",str(line).strip()) for line in myFile]
+        lines = [re.split("\t",str(line).strip()) for line in myFile]
         
-        i=0
-        while i < len(lines):
-            if len(lines[i]) > 1:
-                j=0
-                while j < len(lines[i]):
-                    if (lines[i][j].upper().strip() not in seen):
-                        words.append(lines[i][j])
-                        seen.add(lines[i][j].upper().strip())
-                        j+=1
-                    else:
-                        duplicates.add(lines[i][j])  
-                        j+=1  
-            else:
-                if (lines[i][0].upper().strip() not in seen):
-                    words.append(lines[i][0])
-                    seen.add(lines[i][0].upper().strip())
+    i=0
+    while i < len(lines):
+        currentLine= lines[i]
+        if len(currentLine) > 1:
+            j=0
+            while j < len(lines[i]):
+                word= lines[i][j]
+                wordUpper= word.upper().strip()
+
+                if (wordUpper not in seen):
+                    words.append(word)
+                    seen.add(wordUpper)
+                    j+=1
                 else:
-                    duplicates.add(lines[i][0])  
+                    duplicates.add(word)  
+                    j+=1  
+        else:
+            word= lines[i][0]
+            wordUpper= word.upper().strip()
+
+            if (wordUpper not in seen):
+                words.append(word)
+                seen.add(wordUpper)
+            else:
+                duplicates.add(word)  
             i+=1
+
 
     with open(outputname,"w") as outputFile: 
         for word in words:
@@ -58,22 +66,19 @@ def command(filename,outputname):
         counter=1
 
         for word in words:
-            if len(word) > 1:
-                outputFile.write((str(word).strip()) + " , ") 
-                if (counter % 5 == 0):
-                    outputFile.write("\n")
+            if len(str(word).strip()) > 1:
+                outputFile.write("{:45s}".format((str(word).strip())) + "    \t    ") 
+                outputFile.write("\n")
                 counter+=1
 
 
     with open("input.txt","w") as outputFile: 
-        counter=1
 
         for word in words:
-            if len(word) > 1:
-                outputFile.write((str(word).strip()) + " , ") 
-                if (counter % 5 == 0):
-                    outputFile.write("\n")
-                counter+=1
+            if len(str(word).strip()) > 1:
+                outputFile.write("{:45s}".format((str(word).strip())) + "    \t    ") 
+                outputFile.write("\n")
+
     sys.exit(0)    
 
 if __name__ == "__main__":
