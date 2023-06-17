@@ -362,25 +362,24 @@ int main(){
             // Sleep for n seconds
         for (int i = 0 ; i < n ; i++){
             //check for escape key or clicking
-
             if (GetAsyncKeyState(VK_ESCAPE))
             {
                 return 1;
             }
-            if (GetAsyncKeyState(VK_LBUTTON))
+            else if (GetAsyncKeyState(VK_LBUTTON))
             {
                 return 1;
             }
-            if (GetAsyncKeyState(VK_RBUTTON))
+            else if (GetAsyncKeyState(VK_RBUTTON))
             {
                 return 1;
             }
-            if (GetAsyncKeyState(VK_SPACE))
+            else if (GetAsyncKeyState(VK_SPACE))
             {
                 return 1;
             }
             //Skip this word but don't exit program with kb right function
-            if (GetAsyncKeyState(VK_RIGHT)){
+            else if (GetAsyncKeyState(VK_RIGHT)){
                 return 0;
             }
                 //sleep for one second n times in the loop to be more responsive
