@@ -2,11 +2,11 @@ import sys
 import re
 
 
-def main():
+def main() -> None:
     command(sys.argv[1],sys.argv[2])
 
 
-def command(filename:str,outputname:str):
+def command(filename:str,outputname:str) -> None:
     words= []
     filename= str(filename)
     outputname = str(outputname)
@@ -61,7 +61,7 @@ def command(filename:str,outputname:str):
     sys.exit(0)    
 
 
-def writeFile(fileName:str,words:list):
+def writeFile(fileName:str,words:list) -> None: 
     with open(fileName,"w") as outputFile: 
         for word in words:
             word = str(word).strip()
