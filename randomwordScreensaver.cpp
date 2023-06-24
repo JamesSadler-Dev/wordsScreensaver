@@ -28,16 +28,24 @@ int main()
     vector<string> words;
     string word = "";
     ifstream file("words.txt");
-
+    int randomBuffer = 0;
+    string past = "";
 
     while (getline(file, word))
     {
         words.push_back(word);
     }
 
-    //
-    int randomBuffer = 0;
-;   string past = "";
+    //error out if there's no second word to switch to
+    if (words.size() < 2){
+        cout << "ERROR: NOT ENOUGH WORDS IN DATABASE" << "\n";
+
+        for (int i=3; i > 0; i--){
+            cout << "\n" << "Closing in " << i;
+            this_thread::sleep_for(chrono::seconds(1));
+        }
+        return 1;
+    }
 
     // screensaver loop
     while (true)
