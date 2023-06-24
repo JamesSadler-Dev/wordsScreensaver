@@ -48,11 +48,6 @@ int main()
         string current = words[randomIndex];
 
 
-        // guardian pattern
-        if (current.length() < 2 || current.find_first_of("") == 0)
-        {
-            continue;
-        }
 
         // Skip repeats one time
         if (!past.empty() || past == "")
@@ -71,6 +66,13 @@ int main()
 
         char outputWord[100];
         setSplitLogic(current,outputWord);
+        
+        // guardian pattern
+        if (current.length() < 2 || current.find_first_of("") == 0)
+        {
+            continue;
+        }
+
 
         system("cls");
         randomBuffer = (rand() % 3) + 1;
