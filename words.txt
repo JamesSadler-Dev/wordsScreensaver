@@ -1,1 +1,1801 @@
-final class coolClass
+Scrapy	
+Wireshark	
+Typer	
+Type Hints	
+Annotations	
+MyPy	
+Command Line Arguments	
+Rust	
+i32	
+fn my_fun()	
+main()	
+lambda	
+flex-wrap:	
+flex-shrink:	
+flex-grow:	
+Prepend	
+.prepend() HTML Element	
+Requests	
+BeautifulSoup	
+Node Abstract Baseclass	
+CSS Selectors	
+Implementing	
+Document	
+innerHTML	
+Complement	
+Flask	
+Instantiate Python Apps	
+@app.command	
+def myClicommand(arg1:int):	
+Decorator Pattern	
+Webapp	
+Controller	
+Views	
+Routes	
+POST/GET	
+<form>	
+<input>	
+<select>	
+<option>	
+name Attribute	
+required Attribute	
+Multiple Element Selector	
+autocomplete Attribute	
+autofocus Attribute	
+Pseudoclasses	
+attribute Selector	
+id Selector	
+Direct Descendant Selector	
+All Descendant Selector	
+Viewport	
+Media Queries	
+Responsive Design	
+@media (min/max-width){ color:blue}	
+rem Measurement	
+em Measurement	
+% Measurement	
+device-width	
+Screen Orientation in Mediaqueries	
+Class Selector	
+Code Generation	
+Race Condition	
+async	
+Interpreter Ticks	
+Signals	
+GIL	
+Locks	
+Synchronization Techniques	
+Transactions	
+Relational DB	
+Non-Relational DB	
+SQLite	
+INSERT INTO tablename	
+VALUES(?)	
+Columns	
+Rows	
+Language Constructs	
+Subquery	
+JOIN this ON this.id= other.this_id;	
+UPDATE tablename SET	
+Where Clause	
+DROP TABLE myTable;	
+DELETE FROM myTable;	
+matching SQL	
+Wildcards	
+DISTINCT()	
+AVG()	
+MIN()	
+MAX()	
+COUNT()	
+ALTER TABLE tablename	
+"IN" SQL	
+primary key	
+foreign key	
+PRIMARY KEY(id)	
+FOREIGN KEY this.otherid REFERENCES other.id;	
+.schema	
+.help	
+.import	
+find Command	
+-name	
+-iname	
+-ctime	
+-type	
+-size	
+-exec	
+locate command	
+updatedb	
+app.run(debug=true)	
+flask mail	
+flask session	
+app.config["stuff"]	
+@app.route("/")	
+Methods=["POST","GET"]	
+render_template()	
+request.args.get()	
+request.forms.get()	
+((random.int)%maxvalue) +min	
+import sqlite3	
+conn= sqlite3.connect()	
+c = conn.cursor()	
+c.execute("INSERT INTO")	
+c.executemany(queries)	
+conn.rowfactory= Sqlite3.row	
+c.fetch() executed query	
+.fetchMany()	
+c.fetchAll()	
+"use strict"	
+setInterval()	
+setTimeout()	
+Borrow Checker	
+Semantic Elements	
+Screen Readers	
+Pseudoelement Selector	
+Cascade CSS	
+CSS Specificity	
+Factoring Out Commonalities	
+Separation of Concerns	
+Clientside	
+Serverside	
+Javascript Frontend	
+Controllers Backend	
+MVC- Model View Controller	
+Business Logic	
+API	
+Web Services	
+Graph Theory	
+Edges	
+Combinatorial	
+Time Complexity	
+Polynomial Runtime	
+Big O	
+Theoretical Efficiency	
+Sequential	
+Flow of Control	
+ArrayList<String>	
+LinkedList<String>	
+List Interface	
+First Class Functions	
+Functional Programming	
+Closures	
+Hidden Outer Variable	
+Access Modifiers	
+Arrow Functions	
+DOM- Document Object Model	
+Max Identifier Length	
+Case Conventions	
+Pascal Case	
+kebab-case	
+camelCase	
+Exponential Runtime	
+Nested Loop	
+Labelled Break	
+Fallthrough	
+window.alert()	
+console.log()	
+new Date()	
+.toLocaleString()	
+Reference Types	
+Wrapper Class	
+document.QuerySelector()	
+QuerySelectorAll()	
+Heterogenous Containers	
+Homogenous Containers	
+.parseInt()	
+.parseFloat()	
+Formatting Strings	
+f-Strings	
+Template Strings	
+Cookies	
+Sessions	
+SQL Injection Attack	
+CSS Positioning	
+Headers	
+Sidebar	
+Mutation	
+position:fixed	
+position:relative	
+position:absolute	
+position:absolute in relative	
+.value Attribute	
+<nav>	
+<div>	
+<button>	
+Events	
+Accessibility	
+Guard Operator &&	
+Guardian Pattern	
+Default Operator ||	
+Garbage Value	
+Try-Catch-Error	
+throw new error("oof")	
+Require + Reverts	
+Sybil Attack	
+Hard Fork	
+git commit	
+git merge	
+List Comprehension	
+Initialize Literals	
+Dictionary Comprehension	
+for k\v in myDict.items()	
+enumerate()	
+zip()	
+forEach()	
+map()	
+Callback Function	
+Higher Order Function	
+Pure Function	
+Stateful	
+Stateless	
+Dynamic Website	
+layout.html	
+Frameworks	
+Endpoint	
+Global Variable	
+Global Scope	
+Hoisting	
+Function Prototyping	
+Liskov Substitution	
+Interfaces as Types	
+Slicing	
+String Representation	
+Object Comparison	
+str()	
+add()	
+.toString()	
+Character.digit()	
+re.findall()	
+re.search()	
+Compile Pattern	
+Match Object	
+Match and Extract Groups	
+re.sub()	
+split()	
+.replaceAll()	
+Parity	
+JSON	
+Shorthand Property	
+Shorthand Method	
+Destructuring	
+Superset	
+TypeScript	
+Transpile	
+Return Type	
+Linter	
+Compiler	
+Machine Code	
+Assembly	
+Fortran	
+Environment Variable	
+OS.environ	
+OS module	
+OS.path Submodule	
+Public Key Cryptography	
+Type Coercion	
+Data types	
+Floating Point Number	
+Integer Rollover	
+Truncation	
+Absolute Number	
+Event Loop	
+Event Listener	
+Property	
+Attribute	
+Element	
+Member	
+Idiomatic Language	
+Design Patterns	
+Singleton	
+Factory Pattern	
+Single Point of Access	
+Exit Codes	
+Real Number	
+Natural Number	
+Little Gauss Formula (n*(n+1))/2	
+Procedural Programming	
+Client Expectations	
+Start High Negotiating	
+Two Pointers	
+Length() - 1	
+Developers Docs	
+Markdown	
+Documenting Functions	
+PyTest	
+Unit Testing	
+Coverage	
+Test Driven Development	
+CI/CD	
+Breaking Changes	
+Comingling	
+External Stylesheet	
+Static Resources	
+Heap	
+Memory Management	
+Recursion	
+Call Stack	
+Pass by Value	
+pass by Reference	
+Pointers	
+Addresses	
+Reference Count	
+Value of Operator	
+Address of Operator	
+Garbage Collection	
+Scope	
+Local Inner Variables	
+Shadowing	
+Data Hiding	
+Private	
+Inheritance	
+Non-Deterministic	
+Deterministic	
+Definite Assignment	
+Just-in-Time Compilation	
+Parse Tree	
+Compiler Optimizations	
+Preprocessor Directives	
+#include	
+Header Files	
+Runtime Libraries	
+Index Of	
+Last Index Of	
+index()	
+rindex()	
+array.reduce()	
+array.splice()	
+Multiple Inheritance	
+Diamond Inheritance Problem	
+K+R Style	
+Concurrency	
+Parallelism	
+#define	
+Constants	
+const	
+final	
+Reassignment	
+Object.freeze()	
+Bracket Notation	
+Dot Notation	
+Character Arrays	
+Strings as Objects	
+Pandas	
+Money Math	
+Numpy	
+Floating Point Imprecision	
+Precision	
+Redis DB	
+Array.push()	
+array.pop()	
+Stack	
+Queue	
+LIFO	
+FIFO	
+Doubly Linked List	
+Linked List	
+Reverse Linked List	
+Structured Programming	
+Goto/label/break	
+OS.getcwd()	
+Interface	
+super()	
+this()	
+Constructor	
+constructor()	
+__init__()	
+__init__.py	
+Java Project	
+Fully Qualified Name	
+Fully Qualified Domain	
+Subdomain	
+Top Level Domain	
+Clean URL	
+URI	
+Implicit Coercion	
+Number Base Systems	
+String Concatenation	
+Overloading	
+Overriding	
+Concrete Implementation	
+Coupling	
+Polymorphism	
+Dynamic Polymorphism	
+Runtime Errors	
+Length Method vs Property	
+Unicode	
+UTF-8	
+HTML Entities	
+CSS Box Model	
+box sizing: border-box	
+Evaluation	
+Declaration	
+RGB Color	
+HSB Color	
+opacity:	
+transition:	
+.class::hover	
+.class::active	
+.class::focus	
+.class::visited	
+text-decoration:	
+Font-weight:500	
+<meta> tags	
+<meta> Keywords	
+<meta> Description	
+<Header>	
+<Main>	
+<Footer>	
+<script>	
+<iframe>	
+<table>	
+<thead>	
+<tbody>	
+<th>	
+<td>	
+<dl>	
+<dt>	
+<hr>	
+<br>	
+&nbsp	
+Hex	
+Radix	
+Black Box Methods	
+Dont Repeat Yourself	
+Method Chaining	
+<a href>	
+<html>	
+CSS Reset	
+requests.get(link)	
+None	
+undefined	
+NULL	
+Sentinel Character	
+disabled Attribute	
+B-trees	
+Binary Search Tree	
+Red Black Trees	
+Balancing Trees	
+*node	
+struct	
+typedef	
+switch	
+case	
+break	
+default:	
+Null Pointer Error	
+Dangling Pointer	
+Memory Leak	
+malloc()	
+sizeof()	
+free()	
+Temp Variable	
+swap(&a &b)	
+Passing Copy of Reference	
+Load Balancer	
+TCP	
+Packets	
+Guaranteed Delivery	
+HTTP	
+HTTP Headers	
+Hashmap	
+Dict	
+Map JS	
+mapping(x => y)	
+Literals	
+Static	
+Static Context	
+Instance Variable	
+Inner Class	
+Private Inner Class	
+Outer Class	
+Superclass	
+del	
+Continue	
+Accumulator Pattern	
+<img>	
+<video>	
+autoplay Attribute	
+muted Attribute	
+controls Attribute	
+Block Element	
+Inline Block	
+Max Recursive Depth	
+Lexical Analyzer	
+Literate Programming	
+Flow Chart Style	
+border-radius:	
+<input> type: checkbox	
+<input> type: radio	
+<input> type: text	
+<input> type: submit	
+<input> type: reset	
+Constant Time	
+Boilerplate	
+Doctype Declaration	
+Module	
+Library	
+Package	
+Class	
+CSV	
+Flat File Database	
+DictReader	
+DictWriter	
+Context Manager	
+Multiprocessing	
+Concurrent.Futures	
+await	
+color:	
+background-color:	
+border-style:	
+padding:	
+margin:	
+flex-direction:column	
+text-shadow:	
+box-shadow:	
+Unsigned Numbers	
+Format Codes	
+Character Classes	
+Cron	
+jobs	
+bg	
+fg	
+Rest Params	
+Variable Arity	
+Spread Operator	
+Packing/Unpacking	
+*args	
+**kwargs	
+.get() Default Value	
+Traversal	
+Iterator Pattern	
+Iterable	
+Iterator	
+Return	
+Yield	
+Contiguous Memory	
+Pointer Arithmetic	
+Buffer Overflow	
+Segfault	
+fgets()	
+scanf()	
+Determinant Loop	
+Indeterminant Loop	
+Merge Conflict	
+Commit History	
+Straight Through Merge	
+Three Way Merge	
+Rebasing	
+If __name__ == "main"	
+__name__	
+Binary Search	
+Staging Area	
+Event-Driven Programming	
+line-height:	
+column-gap:	
+row-gap:	
+character-gap:	
+Font Stack	
+Fallback Font	
+Importing Fonts HTML	
+Workers async	
+Thread-safe Collection	
+Hashtable	
+Discrete Math	
+Induction	
+Correctness	
+Quadratic Runtime	
+Sqrt Newton Formula	
+Double	
+Long	
+Scientific Notation	
+Indentation	
+Curly Brackets	
+Modularity	
+Bootstrap	
+CSS	
+React	
+Npm	
+Node.js	
+Javascript Engine	
+JVM	
+EVM	
+uint256	
+int256	
+String	
+Address	
+Payable Address	
+Returns(string)	
+Placeholders	
+Interpolation	
+Bytecode	
+async sleep	
+Coroutine	
+Virtual + Override	
+Enum	
+Var	
+Strongly Typed	
+Weakly Typed	
+Mouse and KB events	
+HTML + CSS + JS	
+df.iloc()	
+soup.select()	
+Blocking	
+Non-blocking	
+async def	
+Sorting Algos	
+Searching Algos	
+grep	
+ls	
+cd	
+cp	
+mv	
+ls -la	
+ps	
+ps -aux	
+Process ID PID	
+Kill -9	
+Kill -15	
+SIGINT	
+SIGKILL	
+SIGTERM	
+Ctrl+C	
+Ctrl+X	
+IDE	
+Live Server	
+NaN	
+for..in	
+for:each Java	
+for..of	
+do..while	
+Bottom Tested Loop	
+Top Tested Loop	
+I/O bound	
+CPU Bound	
+Amdahls Law	
+Association Lists	
+Venv	
+import	
+Subpackages	
+Syntax Error	
+Selection Sort	
+Valgrind	
+lint	
+Fetch API	
+Readable Code	
+Incrementing	
+Decrementing	
+Loop Control Variable	
+Priming Loop	
+strace	
+IP	
+ipconfig	
+ifconfig	
+Metacharacters	
+Pattern.compile()	
+strcmp()	
+strlen()	
+strcpy()	
+<stdio.h>	
+<stdlib.h>	
+<strings.h>	
+getline()	
+getchar()	
+Ordinal Values	
+Character Arithmetic	
+Shell	
+REPL	
+print()	
+echo	
+System.out println("HelloWorld");	
+printf()	
+.format()	
+Arrays	
+Objects JS	
+top	
+htop	
+top:0 left:0 right:0 height:50px	
+du -h	
+df -h	
+Human Readable -h	
+Verbose -v	
+rmdir	
+rm -ri	
+ls -lah	
+Functional Interface	
+Single Abstract Method	
+fdisk	
+Symlinks	
+Hardlinks	
+ln -s	
+chmod	
+chgrp	
+group	
+File Owners	
+sudo	
+Superuser	
+su --login	
+su -	
+Chmod Octal	
+chmod U+RWX	
+byte	
+bit	
+char	
+Raw String	
+Encoding	
+Decoding	
+Helper Function	
+contains()	
+Strict Equality	
+Truthy Falsy	
+ES6	
+=> Arrow Operator	
+CPython	
+C API Python	
+Interpreter	
+Next.js	
+Arrays.asList()	
+java.util.*	
+JavaFX	
+Java Swing	
+JFrame	
+Window Object	
+GUI Programs	
+Blob SQL	
+Text SQL	
+text NOT NULL	
+Integer SQL	
+Numeric SQL	
+"AS" SQL	
+justify-content: spaced-between	
+justify-content: between	
+justify-content: start	
+justify-content: end	
+justify-content: center	
+Relative Measurements	
+Absolute Measurements	
+User Agent Stylesheet	
+Dev Tools Chrome	
+Computed Tab	
+localStorage	
+JSON.stringify()	
+JSON.parse()	
+XML	
+Style	
+Style Guide	
+PEP8	
+Conventions	
+Binary operator	
+Ternary operator	
+Initialization	
+Relational Operators	
+javac	
+GCC	
+For Loop C	
+Register Variable	
+Tkinter	
+Display Manager	
+X Window Manager	
+Files	
+Directories	
+Executable	
+SSH	
+Ports	
+Services	
+Port 21	
+Port 22	
+Port 80	
+Port 443	
+HTTPS	
+Class Variables	
+Class Constants	
+Static Methods	
+@staticmethod	
+@classmethod	
+Variable	
+Block	
+Statement	
+Expression	
+Invoking Function	
+Returning Function	
+Port Forward	
+Firewall	
+fopen()	
+File Modes	
+Write Mode	
+Append Mode	
+Read Mode	
+wc	
+uniq	
+sort	
+uniq -c	
+Piping	
+Pipelines	
+Redirecting Output	
+2>	
+>&	
+pwd	
+PowerShell	
+Windows Subsystem Linux	
+Active Directory	
+Default Noargs Constructor	
+Primitive Types	
+Timer	
+Short-circuit Evaluation	
+Space Complexity	
+Algorithms	
+Linux	
+GNU	
+Git	
+GitHub	
+Solidity	
+Test Decision Making	
+Counting Operations	
+Negation	
+Iterations	
+String.repeat()	
+Precondition	
+Postcondition	
+Modeling Real Life Objects	
+And &&	
+Or ||	
+Bitwise Operators	
+any()	
+all()	
+filter()	
+flags=RE.I	
+Implementation	
+Extends	
+Jinja Block	
+Throwing Hashmap at Problem	
+Lexical Environment	
+cat	
+tac	
+less	
+more	
+nano	
+Reboot Command	
+Low Level Language	
+High Level Language	
+apt	
+dpkg	
+rpm	
+zypper	
+High Level Package Manager	
+Low Level Package Manager	
+Dependency Resolution of Packages	
+Dependency Injection	
+Maven	
+IntelliJ	
+Matcher Object	
+Scanner Object	
+window .prompt("username:");	
+awk	
+sed	
+xargs	
+tar	
+gzip	
+gunzip	
+vim	
+apt install	
+Globbing	
+Streams API	
+Lambda Implementation FunctionalInterface	
+XDG-open	
+test -e and -ge	
+Uptime Command	
+killall	
+Expansions Linux	
+History Command	
+clear	
+cls	
+History Expansions	
+Path Expansions	
+Wildcard Expansions	
+Root Directory /	
+~ Linux	
+/home	
+/usr	
+/bin	
+/sbin	
+<input Type: Quantity>	
+<input Type: Number>	
+<input Type: Email>	
+<input Type: File>	
+Absolute Path	
+Relative Path	
+Sudoers File	
+/var/log/syslog	
+(x)=> {System.out.println(x)};	
+public static void main(String[]args);	
+Diamond Operator	
+Argc	
+Argv	
+Void Return Type	
+Protected Modifier	
+Default Modifier Java	
+Protocols	
+SMTP	
+Sockets	
+Mail Server	
+Nakamoto Consensus	
+View Function	
+Python Interpreter	
+Cython	
+Set Interface	
+HashSet	
+LinkedHashSet	
+Intersection	
+Difference Set	
+Anonymous Object	
+Object Class	
+*PyObject	
+Nodes	
+Terminal	
+Teletype	
+Timesharing	
+Mainframe	
+Cache	
+Registers	
+Arithmetic Units	
+Atomic Operation	
+RDBMS	
+Branching	
+Elif	
+Zero Trip Conditions	
+Finite Time to Complete	
+Web Scraping	
+Multi-line String	
+%s	
+%n	
+%g	
+%d	
+len()	
+range()	
+%f	
+%05d	
+%-5d	
+%5d	
+Allocation	
+New Operator	
+new Regex()	
+.startswith()	
+.endswith()	
+^ Regex	
+$ Regex	
+\b	
+\S regex	
+\s	
+\D	
+\d regex	
+\w	
+\W regex	
+\t	
+\r	
+Escape Sequences	
+\n	
+//	
+{{ Placeholder }}	
+iter()	
+next()	
+Subscript	
+Substring()	
+Operands	
+Logarithms	
+Side Effects	
+Subroutines	
+Routines	
+Methods	
+Functions	
+self	
+this	
+conn.commit()	
+conn.close()	
+Floor Division	
+Ceil Division	
+round()	
+Math Class	
+Random.choice() Collections	
+Data Structures	
+Exponentiation Operator	
+Rearrangement License	
+to_csv()	
+to_excel()	
+from_excel()	
+from_csv()	
+Writer Object	
+File Class	
+localstorage.store()	
+localstorage.get()	
+localStorage.remove()	
+Array.shift()	
+Array.unshift()	
+Shallow Copy	
+realloc()	
+Buffer	
+Vector	
+Matrix	
+2D Array	
+Factorial	
+Number Type	
+Binary	
+Bits	
+Bytes	
+HashMap.put()	
+Hashmap.get()	
+Subscript Dictionary	
+Modifying In-place	
+Clobbering	
+ArrayList.set()	
+ArrayList.add()	
+ArrayList.remove()	
+Version Control	
+Git Checkout Branch	
+Pull Request	
+Code Review	
+Order of Operations	
+Top Down Evaluation	
+Pseudocode	
+Top Down Refinement	
+Equality	
+Hidden Inner Class	
+Hidden Inner Function	
+Argparser	
+--help	
+cwd	
+Licensing	
+MIT License	
+Apache License	
+Apache Web Server	
+Syntax	
+Syntactic Sugar	
+Augmented Operators	
+Dunder Method	
+Assignment Operator	
+Logical Operators	
+Parameters	
+Arguments	
+Abstraction	
+Composition	
+Worst Case	
+Linear Probe	
+Average Case	
+Best Case	
+Zero Based Indexing	
+Exclusive Counting	
+Reinitialization Step	
+Automation	
+Bash	
+System Commands	
+Pathlib	
+Bang	
+Shebang	
+PATH	
+Sha-256	
+RSA	
+Keccak	
+Zsh	
+Bugs	
+Debugging Statement	
+Debugger	
+Step Over	
+Step Into	
+Breakpoint	
+Consensus	
+Peers	
+Router Hops	
+Line Wrapping	
+Content Assist	
+Passkey	
+Two Factor	
+linear-gradient:	
+background-image:	
+background-repeat:	
+nowrap	
+Cross Compile C	
+Pip	
+recursive Case	
+Base Case	
+Infinite Loop	
+Infinite Recursion	
+Traceback	
+Exception	
+Raise	
+"+" Regex	
+"." Regex	
+Regex: Ranges	
+Range Objects	
+Whitespace	
+.strip()	
+.rstrip()	
+sort() By Key	
+sorted()	
+ascending=true	
+reverse=true	
+reverse()	
+Intrinsic Objects	
+plot()	
+Recursion Depth	
+Recursion Error	
+Client Side Protections	
+Matplotlib	
+R Language	
+O(n)	
+O(1)	
+O(nlogn)	
+O(logn)	
+Sublinear Runtime	
+Quasilinear Runtime	
+Specification	
+Synchronous	
+Join Tasks	
+Raster	
+SVG	
+WebP	
+Repr	
+Semantics	
+Grammar	
+Low Level Plumbing	
+Pass by Value/Reference	
+Black Box Functions	
+Fully Evaluated	
+Dynamic Memory Management	
+How Hashing Works	
+How Arrays Work	
+Structs	
+Classes	
+Null Pointer Exception	
+Null Check	
+Void	
+Defensive Programming	
+Try-Catch Exception Finally	
+Raising Errors	
+Dev Docs	
+Unit Testing Frameworks	
+Assertion	
+Threading	
+Thread Safe	
+Asynchronous	
+Race Conditions	
+Operating Systems	
+Paradigms	
+Object-Oriented Programming	
+Interfaces	
+Enums	
+Privacy	
+Object Lifetime	
+Mutation vs Reassignment	
+Inner Classes	
+Lambda Functions	
+Pure Functions	
+Hoisting/Prototyping	
+Extern/Export	
+Code Reuse	
+Members	
+Constructors	
+Getters/Setters	
+Dependencies	
+Wrapper Classes	
+Dunder Methods	
+Abstract	
+Variadic Inputs	
+Libraries	
+Modules	
+Open Source	
+Granular Control	
+Web Development	
+APIs	
+Backend	
+Frontend	
+Django	
+Data Validation	
+Client	
+Server	
+Volatile Storage	
+Frontend Frameworks	
+HTML+CSS	
+Positioning	
+Nested Layouts	
+Display Flexbox and Column	
+Flex- Wrap Shrink Justify	
+Relational Databases SQL	
+Non-Volatile Storage	
+NoSQL Databases	
+Networking	
+Blockchain	
+Statistics	
+Data Science	
+JavaScript	
+Browser LocalStorage	
+Number Systems	
+JINJA	
+Templating	
+Model-View-Controller MVC	
+Get Character	
+Uppercase	
+Lowercase	
+Titlecase	
+Compare Objects	
+Compare Ignore Case	
+Conversion	
+Concatenate	
+Overloaded Operators	
+Substitution	
+Text Blocks	
+Raw Strings	
+Newline	
+.charAt()	
+.compareTo()	
+.compareToIgnoreCase()	
+Greedy Matching	
+String.trim()	
+.replace()	
+String.valueOf()	
+JavaDocs	
+bool	
+Boolean Expression	
+Boolean Wrapper	
+TypeError	
+ValueError	
+Subclass	
+Subclassing Exception	
+Compilation	
+Compilation Error	
+KeyError	
+Web Assembly	
+jump	
+mov	
+rdi	
+rsi	
+Natural Size	
+int	
+float	
+short	
+Local Automatic Variable	
+Constant	
+call	
+syscall	
+Function Caller	
+Messages	
+Dereferencing	
+Functional	
+Object-Oriented	
+Structural	
+Procedural	
+Event Driven	
+Collaboration Git	
+git branch	
+git checkout -b	
+git log	
+git status	
+git add	
+git diff	
+diff	
+origin/master	
+git pull	
+git push	
+git clone	
+git fork	
+Remote Repo	
+HEAD Git	
+git reset	
+git reset origin/master	
+Adversarial User	
+Empty String	
+Datatype Checks	
+isInstance(userInput,String)	
+TypeOf Operator	
+Errors	
+Handling Exceptions	
+Checked Exceptions	
+Unchecked Exceptions	
+Reprompting	
+Sass	
+.scss	
+Sass --watch	
+Sass Variables	
+Sass Inheritance	
+%mySassClass{color:green}	
+{%extends layout.html%}	
+{% block body %}	
+{% endblock %}	
+Extends %mySassClass	
+Patching Diffs	
+Levels of Abstraction	
+Iterative Solution	
+Recursive Solution	
+Cascading Conditions	
+sprintf(BufferToStoreIn,"%5s" ,userString);	
+rand()	
+Stream operators	
+std::cout	
+std::end	
+std::endl	
+sys.exit(0)	
+sys.argv	
+app = Flask(__name__)	
+Apps	
+Templates	
+CLI Option	
+CLI Subcommmand	
+Wrapper Function	
+Windows API	
+include <windows.h>	
+GetConsoleWindow() SetConsoleCursorInfo()	
+&handle	
+std::staticFun("YO");	
+cfi.FontFamily Etc. Globals	
+Class.coolStaticFunction("foo");	
+app = Typer.typer()	
+Hashing function	
+Min/Max Loops	
+Memory Variable	
+Storage Variable	
+extern	
+Automatic Local Variable	
+Trade Memory For Speed	
+global Declaration	
+internal Variable Type	
+Wrapped Function	
+K:V Pairs	
+Tuples	
+Create Retrieve Update Delete	
+HashMap.keySet()	
+Generators	
+input()	
+itertools	
+Modifying Structure Inplace	
+char *myString	
+Idiomatic Langauge	
+Divide By 0 Error	
+One to Many Relationship	
+django-admin startProject	
+manage.py	
+python manage.py startapp	
+python manage.py	
+Django Project	
+Atomic Operations	
+Transactions globals	
+BEGIN TRANSACTION	
+StringBuilder	
+Arrays Wrapper Class	
+Off-By-One Error	
+Default Parameters	
+f"hello {planet}"	
+`helloo ${world}`	
+printf("%05f",myNum);	
+"{:15s}".format(myValue)	
+requirements.txt	
+app.py	
+urls.py	
+<form action="/route" method="get">	
+Recursive Data Structure	
+Trees	
+Shutil module	
+aparser.add_argument()	
+aparser.parse_args()	
+functools.reduce()	
+subprocess.run()	
+eval()	
+settings.py	
+touch	
+Lexer Tokens	
+INSTALLED_APPS =	
+Color class constants	
+lambda (x) : x * 2	
+ASCII	
+snake_case	
+fn my_cool_fun(my_int:i32){ println!(my_int);}	
+user@domain$	
+export MYVAR="cool"	
+exec()	
+os.name	
+soup = BeautifulSoup()	
+Instantiation	
+String my2dArray[][] = {{"Hello"},{"There"}};	
+let cool = { "foo" : "bar" };	
+const MY_JS_CONST = 12345;	
+public final int CALCULATION_CONST=12345;	
+Anonymous Function	
+References to Class+Instance	
+With open("file1.txt","w") as filehandle:	
+Finally: Conn.close()	
+Join Table	
+final Class CoolFinalClass{}	
+import pandas as pd	
+from flask import render_template	
+Linear Search	
+Abstract Data Structure	
+Strict Inequality Operator	
+Switch Statement	
+Switch Expression	
+Match Statement	
+return (booleanExpression);	
+if (FunctionTrue) { console.log("true");}	
+struct node { *node; char *data;}	
+x if (x > y) else y	
+(x > y) ? x : y;	
+Nested Ternary Operator	
+do {console.log(i); i++;}while(i < 10)	
++= , ++ , -= , -- , *=	
+Using Before Assignment	
+Block Scope	
+function myFunc(...args){	
+Work Unit	
+Jupyter Notebooks	
+Ruff	
+Major Versions	
+Development Branch	
+std::cout << "cooool" << \n;	
+Ungetch()	
+Modulus %	
+case "abcdefg"	
+while (true):	
+Nested Destructuring	
+get name(){ return(_name);}	
+set name(name){ _name=name;}	
+@property	
+@<propertyName>.setter	
+_property	
+def myFun(myInt:int): => int	
+import * as capStrings from "cap_strings"	
+MSYS2	
+G++	
+int main(int argc, char *argv){}	
+tasks.json	
+<include iostream>	
+Code Smells	
+.c_str()	
+const char* stuff	
+Null Termination \0	
+Positional Arguments	
+Keyword Arguments	
+INSERT INTO coolTable (col1,col2) VALUES (?,?);	
+OS.path.join(path)	
+Path Seperator	
+Uninitialized Variable	
+Default Values	
+echo "cool.txt" > sort | uniq	
+== myStr.trim().toUpperCase();	
+Modal Dialog Box	
+<dialog>	
+<strong>	
+element.classlist.add(".coolButton");	
+element.classlist.remove();	
+en-US	
+en-UK	
+Locales	
+.toLocaleString("percent")	
+.toLocaleString("measurement")	
+Scalability	
+Quotient	
+Divide and Conquer	
+Algorithmic Thinking	
+Running Time	
+Order of Growth	
+Ammortized Constant	
+True Insert	
+Aliases	
+Successive Values	
+slice = myList[1:5]	
+Incurred Cost	
+Magic Numbers	
+Hard to Understand Tests	
+Type Casting	
+Argument Count	
+Argument Vector	
+Double Quotes vs SingleQuotes	
+Big Omega	
+Typedef Struct	
+Dominant Factors	
+0x	
+Orphaning Nodes	
+Insert into Arraylist /LinkedList	
+Fields	
+Subtrees	
+Red Nodes / Black Nodes	
+print("1234",end="\n")	
+Self Documenting Code	
+80/20 Rule	
+STDIN	
+STDOUT	
+STDERR	
+Parent Process	
+Empty Block / Pass	
+Sys Time	
+element.addEventListener("click",callbackFn);	
+python -m	
+pip list	
+python -m venv .coolVenv	
+Fast and Slow Pointer	
+Comparison Operations	
+.size()	
+.keys() , .values()	
+Tech Stack	
+{k.upper():v.upper() for k,v in cool.items()}	
+Autoboxing Unboxing	
+Macros	
+Event e	
+Tailwind	
+Namespaces	
+Commit Message	
+GPLv3	
+Buckets	
+mail.send(message)	
+Flag Variable	
+Session Dictionary	
+"In" Python	
+Array Name	
+Line wrap	
+Subnet Masks	
+Docstrings	
+Function Docstring Documentation	
+Class Docstring Documentation	
+/* Im a multi-line comment*/	
+Refactoring	
+capture output=true	
+Communitive Operators	
+Associative Operators	
+Binary Operators	
+contract CoolStuff is ERC721	
+tablename (col1,col2,?)	
+coolWebappSql.db	
+x = loggedIn && userName	
+System.In	
+new Scanner(System.In)	
+line.substr(startIn,length);	
+line.find("lol",startIndex);	
+#include <cmath>	
+fmax()	
+fmin()	
+cin >> myInt	
+getline(cin , username)	
+std::cin	
+int[] myJavaArray	
+int myCppArray[]	
+Hardcoded Variables	
+Function Signature	
+Function Stub	
+Nested CSS Sass	
+Session Timeout	
+Character Sets	
+@abc.abstractmethod	
+Invalid State	
+Class MyAbstractBase(ABC):	
+Comma Operator	
+Pointer Variable	
+int *myPointer = &thing;	
+std::string	
+namespace coool{}	
+Class Cool{ public: int CoolInt=1234;}	
+Modifiers + Custom Keywords	
+Private:	
+Disassembler	
+Obfuscating Code	
+dis.dis()	
+API Call	
+Decompiler	
+os.chdir()	
+os.rmdir()	
+os.mkdir()	
+Index Error	
+Namespace Entities	
+using namespace std;	
+for (int i = 0 , int j = 1);	
+Cipher	
+Ciphertext	
+Plaintext	
+Namespace Resolution Operator	
+@media(orientation:portrait/landscape){}	
+Context Switch	
+Hash Collision	
+Ord()	
+Resize Operation	
+Rsync	
+Invariants	
+Loosely Coupled Data	
+Sys.getSizeOf()	
+Finite State Machine	
+FastAPI	
+Turing Complete	
+StopIteration	
+Warnings	
+Standard Library	
+#include bits/..	
+#include <algorith>	
+"Is A"	
+"Has A"	
+Vcpkg	
+Format Codes Python/Rust	
+vector<std::string>	
+vector.push_back(x)	
+Composition > Inheritance	
+GetAsyncKeyState()	
+ANSI Escape Codes	
+optional[]	
+Linker	
+Object Files	
+EOF Character	
+AbortController	
+sys.stdin	
+Open Close Principle	
+Implementation Details	
+Walrus Operator	
+keep_window_open()	
+ACID compliant	
+(int) myDouble	
+SQL And/Or/Not	
+X as u32	
+let mut x = 123;	
+JEP / PEP etc..	
+Free Variable	
+Shutil copy1,2,3 + Copytree	
+@Param: @Class: @Returns: @Throws:	
+Response object Fetch	
+Promise	
+"".join(myList)	
+public Animal animalFactory(userChoice):	
+Multiple Assignment	
+OS.path.exists()	
+OS.walk()	
+void Main()	
+Inferred Classes	
+Const Char *	
+Microframework	
+STL	
+Sys.run()	
+pytest test_cool.py	
+POJO	
+Serialize/Deserialize	
+Deadlock	
+PPrint	
+.gitignore	
+Undefined Behavior	
+Wide Charset String	
+HTML Fragment	
+Nested Comprehension	
+Cascading Changes	
+Creational Patterns	
+Unviersal Initializers	
+NegativeRegex PositiveRegex	
+Cancel SetInterval	
+Type Safety	
+OS.name == "nt"	
+Chocolatey	
+WHERE NOT genre_id = "comedy"	
+ROLLBACK	
+SQL- AND/OR/NOT	
+MailTo link	
+element::firstPart	
+name="#fragment"	
+Alphanumeric	
+Numeric	
+Decimal	
+isidentifier()	
+isprintable()	
+isdigit()	
+isdecimal()	
+str.center()	
+time.time()	
+time.sleep(n)	
+std::system("cls")	
+isupper()	
+islower()	
+isascii()	
+isalpha()	
+typing Module	
+Type Aliases	
+vectorF = list[float]	
+Adaptor Pattern	
+Empty Block C	
+Irrational Numbers	
+Real Numbers	
+Natural Numbers	
+Narrowing	
+Textmate Scopes	
+Inspect Editor Tokens	
+ORM	
+Object Relational Mapping	
+SQLAlchemy	
+Technical Debt	
+int{x}	
+int myUniversalInitializer{coolChar}	
+dir()	
+JSScribbl	
+Feature Stages JS	
+Version Fragmentation	
+ORDER BY	
+GROUP BY	
+anaconda	
+poetry python	
+where table1.id = table2.id	
+Declarative Language	
+Premature Optimizations	
+Profiler	
+Daemon	
+Case _	
+Hashlib	
+Bytearray	
+b"Hello World"	
+sqrt()	
+square()	
+Callable[[int,int],int]	
+dictss = dict[str,str]	
+range-for-loop	
+vector literal	
+median	
+Data Sanitization	
+Formatted Large Numbers	
+using std::string;	
+Brittle Code	
+using vector_s = vector<std::string>;	
+I/O Buffer	
+vec	
+vec.rotate_right(n)	
+vec.push()	
+import <vector>	
+import <string>	
+'x' char literal	
+getline(cin,myString) >> std::ws	
+std::ws	
+getline(cin,myString)	
+Mutable Strings	
+string.append()	
+string.erase()	
+string.insert()	
+cppString[i] = 12345;	
+Kernel	
+include <ctime>	
+srand(time)	
+Clientside Rendering CSR	
+Serverside Rendering SSR	
+Hot Code Reloading	
+Search Engine Optimization	
+Server Rendering Strategies	
+npx create-next/react-app@latest	
+npm run dev	
+package.json nextjs	
+return <h1> hello </h1>	
+CSS Modules	
+example.module.css	
+First Paint	
+NextJS- Automatic Imports	
+export default function cool()	
+Generator Expression	
+MemoryError	
+import {{useRouter}} from 'next/router'	
+const router = useRouter()	
+NextJS - /app	
+NextJS - /public	
+Dynamic Route	
+(Ignored)	
+page.tsx	
+layout.tsx	
+React Server Components	
+Javascript Bundle	
+HTML - comments	
+<!-- hello there -->	
+Alt Text	
+target = "_blank"	
+<section>	
+ShellCheck	
+React - /build	
+Self Closing Tags	
+<MyComponent />	
+Nested Components	
+Main Component	
+Throws	
+Throw	
+Crate	
+catch (ArithmeticException e)	
+except ArithmeticException as e	
+Exception Object	
+throw new ArithmeticException	
+function myFun() public returns(uint256)	
+for x in list: yield x	
+os.remove()	
+os.listdir()	
+os.makedirs()	
+\u001b	
+\u001b[1000D	
+char *x = malloc(sizeof(char * len));	
+:wq	
+Vim Insert Mode	
