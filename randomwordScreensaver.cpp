@@ -22,7 +22,7 @@ void printBuffer(int n);
 int main()
 {
 
-    setfontsize(135);
+    setfontsize(130);
     setConsoleFullscreen();
     srand(time(0));
     vector<string> words;
@@ -36,8 +36,7 @@ int main()
     }
 
     //
-    int randomBuffer1 = 0;
-    int randomBuffer2 = 0;
+    int randomBuffer = 0;
 ;   string past = "";
 
     // screensaver loop
@@ -62,13 +61,11 @@ int main()
             {
                 continue;
             }
-            else
-            {
+            else{
                 past = current;
             }
         }
-        else
-        {
+        else{
             past = current;
         }
 
@@ -76,14 +73,13 @@ int main()
         setSplitLogic(current,outputWord);
 
         system("cls");
-        randomBuffer1 = (rand() % 4) + 4;
-        randomBuffer2 = (rand() % 3) + 1;
+        randomBuffer = (rand() % 3) + 1;
 
         printBuffer(9);
 
         std::cout << outputWord;
         
-        printBuffer(randomBuffer2);
+        printBuffer(randomBuffer);
 
         if (sleepLoopExited(30))
         {
