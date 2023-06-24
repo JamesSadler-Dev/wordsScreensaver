@@ -68,7 +68,8 @@ int main()
         setSplitLogic(current,outputWord);
         
         // guardian pattern
-        if (current.length() < 2 || current.find_first_of("") == 0)
+
+        if (current.length() < 2 || current == "" || outputWord[0] == ' ' || outputWord[1] == ' ')
         {
             continue;
         }
@@ -150,17 +151,23 @@ void setSplitLogic(string current,char outputWord[])
         const int PAD_XXXS = 9;
         const int PAD_XXXXS = 6;
         //
-        outputWord[0] = 0;
-        outputWord[1] = 0;
+        outputWord[0] = ' ';
         int totalLen = current.length();
         const char *totalWordArr = current.c_str();
 
+        /*
+            CASE 0: Don't even process it if there's whitespace to begin with,
+            that should've been stripped with the textformatter.py
+        */
+        if (current[0] == ' ' || current[0] == '\t' || current[0] == '\r'){
+            ; //empty block on purpose
+        }
 
         /*
          *   CASE 1: LINE IS REALLY LONG JUST PRINT NORMALLY
          */
 
-        if (totalLen > LENGTH_LIMIT)
+        else if (totalLen > LENGTH_LIMIT)
         {
              sprintf(outputWord, "%s%s", COL2, totalWordArr);
         }
