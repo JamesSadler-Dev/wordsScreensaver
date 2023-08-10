@@ -7,23 +7,19 @@
 #include <chrono>
 #include <thread>
 #include <windows.h>
+#include "screensaverUtil.hh"
 
 using namespace std;
 using std::string;
 
-void setfontsize(int height);
-void setConsoleFullscreen();
 void setSplitLogic(string current,char outputWord[]);
-int sleepLoopExited(int n);
-void printBuffer(int n);
 
 
 //wordsScreensaver Main loop
 int main()
 {
-
-    setfontsize(130);
-    setConsoleFullscreen();
+    screensaver::setfontsize(130);
+    screensaver::setConsoleFullscreen();
     srand(time(0));
     vector<string> words;
     string word = "";
@@ -55,8 +51,6 @@ int main()
         int randomIndex = rand() % words.size();
         string current = words[randomIndex];
 
-
-
         // Skip repeats one time
         if (!past.empty() || past == "")
         {
@@ -86,54 +80,26 @@ int main()
         system("cls");
         randomBuffer = (rand() % 3) + 1;
 
-        printBuffer(9);
+        screensaver::printBuffer(9);
 
         std::cout << outputWord;
         
-        printBuffer(randomBuffer);
+        screensaver::printBuffer(randomBuffer);
 
-        if (sleepLoopExited(30))
+        if (screensaver::sleepLoopExited(30))
         {
+            system("cls");
+            screensaver::printBuffer(9);
+            std::cout << "\t\u001b[0m\u001b[4m" << "Welcome";
+            std::cout << "\u001b[0m";
+            screensaver::printBuffer(3);
+            this_thread::sleep_for(chrono::milliseconds(300));
             return 0;
         }
     }
 }
-/*
- */
 
-void setfontsize(int height)
-{
 
-    CONSOLE_FONT_INFOEX cfi;
-    cfi.cbSize = sizeof(cfi);
-    cfi.nFont = 0;
-    cfi.dwFontSize.X = 0;      // Width of each character in the font
-    cfi.dwFontSize.Y = height; // Height
-    cfi.FontFamily = FF_DONTCARE;
-    cfi.FontWeight = FW_EXTRABOLD;
-
-    std::wcscpy(cfi.FaceName, L"Consolas"); // Choose your font
-    SetCurrentConsoleFontEx(GetStdHandle(STD_OUTPUT_HANDLE), FALSE, &cfi);
-    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), {500, 500});
-}
-
-void setConsoleFullscreen()
-{
-    // windows api, get X console window property change constants and set property
-    HWND hWnd = GetConsoleWindow();
-    SetWindowLong(hWnd, GWL_STYLE, GetWindowLong(hWnd, GWL_STYLE) & ~WS_BORDER & ~WS_CAPTION);
-    ShowWindow(hWnd, SW_MAXIMIZE);
-    CONSOLE_CURSOR_INFO cursorInfo;
-    cursorInfo.dwSize = 1;
-    cursorInfo.bVisible = FALSE;
-    SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &cursorInfo);
-    CONSOLE_SCREEN_BUFFER_INFO screenBufferInfo;
-    GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &screenBufferInfo);
-    // Set the console screen buffer size to the maximum window size.
-    COORD newScreenBufferSize = {static_cast<SHORT>(screenBufferInfo.srWindow.Right - screenBufferInfo.srWindow.Left + 1),
-                                 static_cast<SHORT>(screenBufferInfo.srWindow.Bottom - screenBufferInfo.srWindow.Top + 1)};
-    SetConsoleScreenBufferSize(GetStdHandle(STD_OUTPUT_HANDLE), newScreenBufferSize);
-}
 
 void setSplitLogic(string current,char outputWord[])
 {
@@ -431,52 +397,3 @@ void setSplitLogic(string current,char outputWord[])
             }
         }
     }
-
-int sleepLoopExited(int n)
-{
-    // Sleep for n seconds
-    for (int i = 0; i < n; i++)
-    {
-        // check for escape key or clicking
-        if (GetAsyncKeyState(VK_ESCAPE))
-        {
-            return 1;
-        }
-        else if (GetAsyncKeyState(VK_LBUTTON))
-        {
-            return 1;
-        }
-        else if (GetAsyncKeyState(VK_RBUTTON))
-        {
-            return 1;
-        }
-        else if (GetAsyncKeyState(VK_SPACE))
-        {
-            return 1;
-        }
-        // Skip this word but don't exit program with kb right function
-        else if (GetAsyncKeyState(VK_RIGHT))
-        {
-            return 0;
-        }
-        // sleep for one second n times in the loop to be more responsive
-        this_thread::sleep_for(chrono::seconds(1));
-    }
-    // onto the next word if we reached 0
-    return 0;
-}
-
-void printBuffer(int n)
-{
-    for (int i = 0; i < n; i++)
-    {
-        cout << "\n";
-    }
-}
-
-
-
-// finish these methods: one to build the string one to format it
-// char * buildString()
-// char * buildTwoLineString()
-// void formatColorAndString(){
