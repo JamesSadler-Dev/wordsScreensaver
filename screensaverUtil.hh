@@ -64,7 +64,24 @@ class wordScreensaver{
                                         static_cast<SHORT>(screenBufferInfo.srWindow.Bottom - screenBufferInfo.srWindow.Top + 1)};
             SetConsoleScreenBufferSize(GetStdHandle(STD_OUTPUT_HANDLE), newScreenBufferSize);
         }
-    
+
+        void greet(){
+                system("cls");
+                printBuffer(9);
+                this_thread::sleep_for(chrono::milliseconds(1));
+                std::cout << "\t\u001b[35m\u001b[4m" << "Welcome";
+                std::cout << "\u001b[0m";
+                printBuffer(3);
+                this_thread::sleep_for(chrono::milliseconds(150));
+                system("cls");
+                printBuffer(9);
+                this_thread::sleep_for(chrono::milliseconds(1));
+                std::cout << "\t\u001b[0m\u001b[4m" << "Welcome";
+                std::cout << "\u001b[0m";
+                printBuffer(3);
+                this_thread::sleep_for(chrono::milliseconds(170));
+        }
+
         void setSplitLogic(string current,char outputWord[])
         {
             cstring COL1 = "\u001b[35m";
@@ -479,34 +496,7 @@ class wordScreensaver{
 
             if (sleepLoopExited(30))
             {
-                system("cls");
-                printBuffer(9);
-                this_thread::sleep_for(chrono::milliseconds(1));
-                std::cout << "\t\u001b[35m\u001b[4m" << "Welcome";
-                std::cout << "\u001b[0m";
-                printBuffer(3);
-                this_thread::sleep_for(chrono::milliseconds(80));
-                system("cls");
-                printBuffer(9);
-                this_thread::sleep_for(chrono::milliseconds(1));
-                std::cout << "\t\u001b[34m\u001b[4m" << "Welcome";
-                std::cout << "\u001b[0m";
-                printBuffer(3);
-                this_thread::sleep_for(chrono::milliseconds(80));
-                system("cls");
-                printBuffer(9);
-                this_thread::sleep_for(chrono::milliseconds(1));
-                std::cout << "\t\u001b[34;1m\u001b[4m" << "Welcome";
-                std::cout << "\u001b[0m";
-                printBuffer(3);
-                this_thread::sleep_for(chrono::milliseconds(80));
-                system("cls");
-                printBuffer(9);
-                this_thread::sleep_for(chrono::milliseconds(1));
-                std::cout << "\t\u001b[0m\u001b[4m" << "Welcome";
-                std::cout << "\u001b[0m";
-                printBuffer(3);
-                this_thread::sleep_for(chrono::milliseconds(155));
+                greet();
                 return 0;
             }
         }
