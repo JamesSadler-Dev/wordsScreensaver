@@ -468,6 +468,7 @@ class wordScreensaver{
 
 
             system("cls");
+            this_thread::sleep_for(chrono::milliseconds(1));
             randomBuffer = (rand() % 3) + 1;
 
             printBuffer(9);
