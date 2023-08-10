@@ -11,6 +11,8 @@
 
 using namespace std;
 using std::string;
+using vectors = std::vector<std::string>;
+using cstring = const char *;
 
 void setSplitLogic(string current,char outputWord[]);
 
@@ -21,7 +23,7 @@ int main()
     screensaver::setfontsize(130);
     screensaver::setConsoleFullscreen();
     srand(time(0));
-    vector<string> words;
+    vectors words;
     string word = "";
     ifstream file("words.txt");
     int randomBuffer = 0;
@@ -103,13 +105,13 @@ int main()
 
 void setSplitLogic(string current,char outputWord[])
 {
-        const char *COL1 = "\u001b[35m";
-        const char *COL2 = "\u001b[32m";
-        const char *COL3 = "\u001b[34m";
-        const char *COL4 = "\u001b[97m";
-        const char *COL5 = "\u001b[31m";
-        const char *COL6 = "\u001b[95m";
-        const char *COL7 = "\u001b[33m";
+        cstring COL1 = "\u001b[35m";
+        cstring COL2 = "\u001b[32m";
+        cstring COL3 = "\u001b[34m";
+        cstring COL4 = "\u001b[97m";
+        cstring COL5 = "\u001b[31m";
+        cstring COL6 = "\u001b[95m";
+        cstring COL7 = "\u001b[33m";
         // lengths to set conditions with
         const int WRAP_LEN = 18;
         const int LENGTH_LIMIT= 44;
@@ -127,7 +129,7 @@ void setSplitLogic(string current,char outputWord[])
         //
         outputWord[0] = ' ';
         int totalLen = current.length();
-        const char *totalWordArr = current.c_str();
+        cstring totalWordArr = current.c_str();
 
         /*
             CASE 0: Don't even process it if there's whitespace to begin with,
@@ -178,8 +180,8 @@ void setSplitLogic(string current,char outputWord[])
                 // having these awesome variables avoids doing this calculation many times
                 string firstPart = current.substr(0, indexOfSpace);
                 string lastPart = current.substr(indexOfSpace + 1);
-                const char *p1Array = firstPart.c_str();
-                const char *p2Array = lastPart.c_str();
+                cstring p1Array = firstPart.c_str();
+                cstring p2Array = lastPart.c_str();
                 int fpLength = firstPart.length();
                 int lpLength = lastPart.length();
 
