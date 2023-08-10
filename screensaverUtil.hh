@@ -480,10 +480,22 @@ class wordScreensaver{
             {
                 system("cls");
                 printBuffer(9);
+                std::cout << "\t\u001b[34m\u001b[4m" << "Welcome";
+                std::cout << "\u001b[0m";
+                printBuffer(3);
+                this_thread::sleep_for(chrono::milliseconds(70));
+                system("cls");
+                printBuffer(9);
+                std::cout << "\t\u001b[34;1m\u001b[4m" << "Welcome";
+                std::cout << "\u001b[0m";
+                printBuffer(3);
+                this_thread::sleep_for(chrono::milliseconds(70));
+                system("cls");
+                printBuffer(9);
                 std::cout << "\t\u001b[0m\u001b[4m" << "Welcome";
                 std::cout << "\u001b[0m";
                 printBuffer(3);
-                this_thread::sleep_for(chrono::milliseconds(250));
+                this_thread::sleep_for(chrono::milliseconds(120));
                 return 0;
             }
         }
