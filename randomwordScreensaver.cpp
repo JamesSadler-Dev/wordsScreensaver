@@ -95,7 +95,7 @@ int main()
             std::cout << "\t\u001b[0m\u001b[4m" << "Welcome";
             std::cout << "\u001b[0m";
             screensaver::printBuffer(3);
-            this_thread::sleep_for(chrono::milliseconds(300));
+            this_thread::sleep_for(chrono::milliseconds(250));
             return 0;
         }
     }
@@ -388,10 +388,6 @@ void setSplitLogic(string current,char outputWord[])
             else if (totalLen < PAD_XXXXS)
             {
                  sprintf(outputWord, "%s%13s", COL7, totalWordArr);
-            }
-            else if (totalLen > PAD_XXS)
-            {
-                  sprintf(outputWord, "%s%16s", COL4, totalWordArr);
             }
             else
             {
