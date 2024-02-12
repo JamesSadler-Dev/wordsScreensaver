@@ -43,27 +43,27 @@ def process_file(filename,seen_tokens,words_to_write,
             
         i=0
         while i < len(lines):
-            currentLine= lines[i]
-            if len(currentLine) > 1:
+            current_line= lines[i]
+            if len(current_line) > 1:
                 j=0
                 while j < len(lines[i]):
                     word= lines[i][j]
-                    wordUpper= word.upper().strip()
+                    word_upper= word.upper().strip()
 
-                    if (wordUpper not in seen_tokens):
+                    if (word_upper not in seen_tokens):
                         words_to_write.append(word)
-                        seen_tokens.add(wordUpper)
+                        seen_tokens.add(word_upper)
                         j+=1
                     else:
                         reused_tokens.add(word)  
                         j+=1  
             else:
                 word= lines[i][0]
-                wordUpper= word.upper().strip()
+                word_upper= word.upper().strip()
 
-                if (wordUpper not in seen_tokens):
+                if (word_upper not in seen_tokens):
                     words_to_write.append(word)
-                    seen_tokens.add(wordUpper)
+                    seen_tokens.add(word_upper)
                 else:
                     reused_tokens.add(word)  
                 i+=1
@@ -85,8 +85,8 @@ def process_file(filename,seen_tokens,words_to_write,
 
 
 
-def write_file(fileName:str,words_to_write:list) -> None: 
-    with open(f"{fileName}","w") as outputFile: 
+def write_file(file_name:str,words_to_write:list) -> None: 
+    with open(f"{file_name}","w") as outputFile: 
         for word in words_to_write:
             word = str(word).strip()
             if len(word) > 1:

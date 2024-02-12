@@ -1,7 +1,7 @@
 
 <h1>Random Word Screensaver</h1>
 
-<h2>**For windows 10 -- 1080p Screen , 125% resolution scaling**<br></h2>
+<h2>**For windows 10**<br></h2>
 <h3>To use a different resolution you can make the <i>height</i> parameter of the setFontSize() function smaller</h3><br>
 <h4>Setup:</h4>
 <ol>
