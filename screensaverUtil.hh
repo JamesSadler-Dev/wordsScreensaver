@@ -8,10 +8,10 @@
 #include <thread>
 #include <windows.h>
 
-using namespace std;
 using std::string;
 using vectors = std::vector<std::string>;
 using cstring = const char *;
+
 
 const cstring COL1 = "\u001b[35m";
 const cstring COL2 = "\u001b[32m";
@@ -42,7 +42,7 @@ private:
     vectors words;
     std::string word = "";
     cstring filename = "words.txt";
-    ifstream file;
+    std::ifstream file;
     int randomBuffer = 0;
     string past = "";
     int fontsize = 100;
@@ -50,7 +50,7 @@ private:
     void fillwords()
     {
         file.open(filename);
-        while (getline(file, word))
+        while (std::getline(file, word))
         {
             words.push_back(word);
         }
@@ -93,20 +93,20 @@ private:
     {
         system("cls");
         printBuffer(9);
-        this_thread::sleep_for(chrono::milliseconds(1));
+        std::this_thread::sleep_for(std::chrono::milliseconds(1));
         std::cout << "\t\u001b[35m\u001b[4m"
                   << "Welcome";
         std::cout << "\u001b[0m";
         printBuffer(3);
-        this_thread::sleep_for(chrono::milliseconds(170));
+        std::this_thread::sleep_for(std::chrono::milliseconds(170));
         system("cls");
         printBuffer(9);
-        this_thread::sleep_for(chrono::milliseconds(1));
+        std::this_thread::sleep_for(std::chrono::milliseconds(1));
         std::cout << "\t\u001b[0m\u001b[4m"
                   << "Welcome";
         std::cout << "\u001b[0m";
         printBuffer(3);
-        this_thread::sleep_for(chrono::milliseconds(170));
+        std::this_thread::sleep_for(std::chrono::milliseconds(170));
     }
 
     void setSplitLogic(string current, char outputWord[])
@@ -411,7 +411,7 @@ private:
                 return 0;
             }
             // sleep for one second n times in the loop to be more responsive
-            this_thread::sleep_for(chrono::milliseconds(100));
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
         }
         // onto the next word if we reached 0
         return 0;
@@ -421,7 +421,7 @@ private:
     {
         for (int i = 0; i < n; i++)
         {
-            cout << "\n";
+            std::cout << "\n";
         }
     }
 
@@ -452,14 +452,14 @@ public:
         // error out if there's no second word to switch to
         if (words.size() < 2)
         {
-            cout << "ERROR: NOT ENOUGH WORDS IN DATABASE"
+            std::cout << "ERROR: NOT ENOUGH WORDS IN DATABASE"
                  << "\n";
 
             for (int i = 3; i > 0; i--)
             {
-                cout << "\n"
+                std::cout << "\n"
                      << "Closing in " << i;
-                this_thread::sleep_for(chrono::seconds(1));
+                std::this_thread::sleep_for(std::chrono::seconds(1));
             }
             return 1;
         }
@@ -500,7 +500,7 @@ public:
             }
 
             system("cls");
-            this_thread::sleep_for(chrono::milliseconds(1));
+            std::this_thread::sleep_for(std::chrono::milliseconds(1));
             randomBuffer = (rand() % 3) + 1;
 
             printBuffer(9);
