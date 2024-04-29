@@ -13,9 +13,6 @@ using vectors = std::vector<std::string>;
 using cstring = const char *;
 
 
-
-
-
 class wordScreensaver{
 
 private:
@@ -27,15 +24,13 @@ private:
     string past = "";
     int fontsize = 100;
 
-    void fillwords()
-    {
+    void fillwords(){
         file.open(filename);
         while (std::getline(file, word))
             words.push_back(word);
     }
 
-    void setfontsize(int fontsize)
-    {
+    void setfontsize(int fontsize){
         this->fontsize = fontsize;
         CONSOLE_FONT_INFOEX cfi;
         cfi.cbSize = sizeof(cfi);
@@ -49,8 +44,7 @@ private:
         SetCurrentConsoleFontEx(GetStdHandle(STD_OUTPUT_HANDLE), FALSE, &cfi);
         SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), {500, 500});
     }
-    void setConsoleFullscreen()
-    {
+    void setConsoleFullscreen(){
         // windows api, get X console window property change constants and set property
         HWND hWnd = GetConsoleWindow();
         SetWindowLong(hWnd, GWL_STYLE, GetWindowLong(hWnd, GWL_STYLE) & ~WS_BORDER & ~WS_CAPTION);
@@ -62,13 +56,12 @@ private:
         CONSOLE_SCREEN_BUFFER_INFO screenBufferInfo;
         GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &screenBufferInfo);
         // Set the console screen buffer size to the maximum window size.
-        COORD newScreenBufferSize = {static_cast<SHORT>(screenBufferInfo.srWindow.Right - screenBufferInfo.srWindow.Left + 1),
+        COORD newScreenBufferSize{static_cast<SHORT>(screenBufferInfo.srWindow.Right - screenBufferInfo.srWindow.Left + 1),
                                      static_cast<SHORT>(screenBufferInfo.srWindow.Bottom - screenBufferInfo.srWindow.Top + 1)};
         SetConsoleScreenBufferSize(GetStdHandle(STD_OUTPUT_HANDLE), newScreenBufferSize);
     }
 
-    void greet()
-    {
+    void greet(){
         system("cls");
         printBuffer(9);
         std::this_thread::sleep_for(std::chrono::milliseconds(1));
@@ -87,8 +80,7 @@ private:
         std::this_thread::sleep_for(std::chrono::milliseconds(170));
     }
 
-    void setSplitLogic(string current, char outputWord[])
-    {
+    void setSplitLogic(string current, char outputWord[]){
 
         //
         outputWord[0] = ' ';
@@ -105,17 +97,14 @@ private:
         /*
          *   CASE 1: LINE IS REALLY LONG JUST PRINT NORMALLY
          */
-
         else if (totalLen > LENGTH_LIMIT)
             sprintf(outputWord, "%s%s", COL2, totalWordArr);
-        else if (totalLen > WRAP_LEN)
-        {
+        else if (totalLen > WRAP_LEN){
             int indexOfSpace = current.find_last_of(" ");
             /* 
             CASE 2: IF LONGER THAN WRAP_LEN BUT NO SPACES
              */
-            if (indexOfSpace == -1)
-            {
+            if (indexOfSpace == -1){
                 // extra padding if it's too long
                 if (totalLen > PAD_XXL)
                     sprintf(outputWord, "%s%23s", COL1, totalWordArr);
@@ -127,8 +116,7 @@ private:
             /* CASE 3:
              *    IF FIRSTPART IS LONGER THAN LONG CUTOFF
              */
-            else
-            {
+            else{
                 //
                 // having these awesome variables avoids doing this calculation many times
                 string firstPart = current.substr(0, indexOfSpace);
@@ -141,34 +129,29 @@ private:
                 /* CASE 3:
                  *    IF FIRSTPART IS LONGER THAN LONG CUTOFF
                  */
-                if (fpLength > PAD_M)
-                {
+                if (fpLength > PAD_M){
                     // LONG FIRSTPART --- SHORT LASTPART
-                    if (lpLength < PAD_XXXXS)
-                    {
+                    if (lpLength < PAD_XXXXS){
                         if (fpLength > PAD_XXL)
                             sprintf(outputWord, "%s%22s\n%14s", COL2, p1Array, p2Array);
                         else
                             sprintf(outputWord, "%s%20s\n%14s", COL1, p1Array, p2Array);
                         // FIRSTPART LONGER THAN LONG CUTOFF AND SHORTER THAN XLCUTOFF -- NORMAL LASTPART
                     }
-                    else if (fpLength < PAD_L)
-                    {
+                    else if (fpLength < PAD_L){
                         // DON'T PAD LASTPART AS MUCH IF IT's TOO SHORT
                         if (lpLength < PAD_XXXS)
                             sprintf(outputWord, "%s%19s\n%16s", COL2, p1Array, p2Array);
                         else
                             sprintf(outputWord, "%s%19s\n%18s", COL1, p1Array, p2Array);
                     }
-                    else
-                    {
+                    else{
                         // FIRSTPART EVEN LONGER THAN XL CUTOFF
                         //  if FIRSTPART too long just format it normally
                         if (fpLength > FIRSTP_LIMIT)
                             sprintf(outputWord, "%s%s", COL2, totalWordArr);
                             // long first part and long last part
-                        else if (fpLength > PAD_XXXL)
-                        {
+                        else if (fpLength > PAD_XXXL){
                             if (lpLength > PAD_L)
                                 sprintf(outputWord, "%s%22s\n%21s", COL2, p1Array, p2Array);
                             else
@@ -190,8 +173,7 @@ private:
                      *    IF FIRSTPART IS LONGER THAN SHORT CUTOFF
                      */
                 }
-                else if (fpLength > PAD_S)
-                {
+                else if (fpLength > PAD_S){
                     if (lpLength < PAD_XXXXS)
                         sprintf(outputWord, "%s%19s\n%14s", COL1, p1Array, p2Array);
                         // DON'T PAD LASTPART AS MUCH IF IT's TOO SHORT
@@ -205,12 +187,10 @@ private:
                      *
                      */
                 }
-                else if (fpLength < PAD_S)
-                {
+                else if (fpLength < PAD_S){
                     if (fpLength == lpLength)
                         sprintf(outputWord, "%s%16s\n%16s", COL1, p1Array, p2Array);
-                    else if (fpLength <= PAD_XXXXS)
-                    {
+                    else if (fpLength <= PAD_XXXXS){
                         if (lpLength > PAD_XXL)
                             sprintf(outputWord, "%s%14s\n%23s", COL1, p1Array, p2Array);
                         else if (lpLength > PAD_M)
@@ -227,15 +207,13 @@ private:
                         // DON'T PAD LASTPART AS MUCH IF IT's TOO SHORT
                     else if (lpLength < PAD_XXXS)
                         sprintf(outputWord, "%s%16s\n%14s", COL2, p1Array, p2Array);
-                    else if (fpLength >= PAD_XS)
-                    {
+                    else if (fpLength >= PAD_XS){
                         if (lpLength > PAD_L)
                             sprintf(outputWord, "%s%17s\n%20s", COL2, p1Array, p2Array);
                         else
                             sprintf(outputWord, "%s%17s\n%16s", COL2, p1Array, p2Array);
                     }
-                    else if (fpLength >= PAD_XXXS)
-                    {
+                    else if (fpLength >= PAD_XXXS){
                         if (lpLength > PAD_L)
                             sprintf(outputWord, "%s%16s\n%23s", COL2, p1Array, p2Array);
                         else if (lpLength >= PAD_XS)
@@ -257,8 +235,7 @@ private:
          *    ELSE BRANCH REACHED IF WRAP LOGIC NOT ACTIVATED
          *
          */
-        else
-        {
+        else{
             if (totalLen > PAD_L)
                 sprintf(outputWord, "%s%21s", COL3, totalWordArr);
             else if (totalLen > PAD_M)
@@ -274,11 +251,9 @@ private:
         }
     }
 
-    int sleepLoopExited(int n)
-    {
+    int sleepLoopExited(int n){
         // Sleep for n seconds
-        for (int i = 0; i < (n * 10); i++)
-        {
+        for (int i = 0; i < (n * 10); i++){
             // check for escape key or clicking
             if (GetAsyncKeyState(VK_ESCAPE))
                 return 1;
@@ -298,14 +273,12 @@ private:
         return 0;
     }
 
-    void printBuffer(int n)
-    {
+    void printBuffer(int n){
         for (int i = 0; i < n; i++)
             std::cout << "\n";
     }
 
 public:
-
     const cstring COL1 = "\u001b[35m";
     const cstring COL2 = "\u001b[32m";
     const cstring COL3 = "\u001b[34m";
@@ -328,37 +301,31 @@ public:
     const int PAD_XXXS = 9;
     const int PAD_XXXXS = 6;
     
-    wordScreensaver(int fontSize, cstring filename)
-    {
+    wordScreensaver(int fontSize, cstring filename){
         setFilename(filename);
         setfontsize(fontSize);
     }
 
-    void setFilename(cstring filename)
-    {
+    void setFilename(cstring filename){
         this->filename = filename;
     }
 
-    cstring getFilename()
-    {
+    cstring getFilename(){
         return this->filename;
     }
 
-    int run()
-    {
+    int run(){
         setfontsize(fontsize);
         setConsoleFullscreen();
         srand(time(0));
         fillwords();
 
         // error out if there's no second word to switch to
-        if (words.size() < 2)
-        {
+        if (words.size() < 2){
             std::cout << "ERROR: NOT ENOUGH WORDS IN DATABASE"
                  << "\n";
 
-            for (int i = 3; i > 0; i--)
-            {
+            for (int i = 3; i > 0; i--){
                 std::cout << "\n"
                      << "Closing in " << i;
                 std::this_thread::sleep_for(std::chrono::seconds(1));
@@ -367,16 +334,13 @@ public:
         }
 
         // screensaver loop
-        while (true)
-        {
-
+        while (true){
             // these prevent us from having to recalculate in the loop needlessly
             int randomIndex = rand() % words.size();
             string current = words[randomIndex];
 
             // Skip repeats one time
-            if (!past.empty() || past == "")
-            {
+            if (!past.empty() || past == ""){
                 if (current == past)
                     continue;
                 else
@@ -387,9 +351,8 @@ public:
 
             char outputWord[100];
             setSplitLogic(current, outputWord);
-
             // guardian pattern
-
+            
             if (current.length() < 2 || current == "" || outputWord[0] == ' ' || outputWord[1] == ' ')
                 continue;
 
@@ -398,13 +361,10 @@ public:
             randomBuffer = (rand() % 3) + 1;
 
             printBuffer(9);
-
             std::cout << outputWord;
-
             printBuffer(randomBuffer);
 
-            if (sleepLoopExited(30))
-            {
+            if (sleepLoopExited(30)){
                 greet();
                 return 0;
             }
