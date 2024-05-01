@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.0)
+project(RandomWordScreensaver)
+
+# Add the executable target
+add_executable(RandomWordScreensaver randomwordscreensaver.cpp randomwords.cpp randomwords.hh)
+
+
+# Set the include directories
+target_include_directories(RandomWordScreensaver PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+
+# Set C++ standard
+set_property(TARGET RandomWordScreensaver PROPERTY CXX_STANDARD 11)
