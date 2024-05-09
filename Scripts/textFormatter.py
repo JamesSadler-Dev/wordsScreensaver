@@ -2,6 +2,9 @@ import sys
 import re
 import os
 
+class IllegalFileInputError(FileNotFoundError):
+    def __str__(self) -> str:
+        return super().__str__()
 
 def main() -> None:
     command(sys.argv[1],sys.argv[2])
@@ -23,23 +26,25 @@ def command(filename:str,outputname:str) -> None:
         raise ValueError("Usage error: Must be text files")
     
     
-    words_path:str = "./outputs/all/words.txt"
+    words_path:str = outputname
 
     
-    process_file(filename,seen,words,reused,f"./outputs/{outputname}","./outputs/duplicates.txt","current")
+    process_file(filename,seen,words,reused,f"{outputname}")
     ## Write over the original file to remove duplicates
     write_file(filename,words)
     ##  Process file of all for duplicates
-    process_file(words_path,seen,words,reused,words_path,"./outputs/duplicatesAll.txt","all")
+    process_file(words_path,seen,words,reused,words_path)
 
        
 
 def process_file(filename,seen_tokens,words_to_write,
-                    reused_tokens,output_path,
-                    duplicates_file,folder):
+                    reused_tokens,output_path):
         
-        with open(f"{filename}","r") as myFile:
-            lines = [re.split("\t",str(line).strip()) for line in myFile]
+        try:
+            with open(f"{filename}","r") as myFile:
+                lines = [re.split("\t",str(line).strip()) for line in myFile]
+        except FileNotFoundError():
+            raise IllegalFileInputError(f"file {filename} not found")
             
         i=0
         while i < len(lines):
@@ -68,20 +73,9 @@ def process_file(filename,seen_tokens,words_to_write,
                     reused_tokens.add(word)  
                 i+=1
 
-        ANSI_GREEN="\u001b[32m"
-        ANSI_RESET="\u001b[0m"
-        output_string= "{:s}\n{:30s} TO:\t {:s}\n".format(ANSI_GREEN,filename,output_path)     
-        output_line2= "{:s}\b{:7s}, DUPLICATES ADDED\n".format(ANSI_RESET,"LINES")
-        output_line3= "\b{:5d}  ,\t{:d}".format(len(words_to_write),len(reused_tokens))
-        print(output_string,output_line2,output_line3)      
-        
-        if os.path.exists(os.path.join(f"./outputs/{folder}")):
-            write_file(f"./outputs/{folder}/words.txt",words_to_write)
-        else:
-            os.mkdir(f"./outputs/{folder}")
-            write_file(f"./outputs/{folder}/words.txt",words_to_write)
-        
-        write_file(duplicates_file,reused_tokens)
+
+        write_file(f"./{output_path}",words_to_write)
+
 
 
 
