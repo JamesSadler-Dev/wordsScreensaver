@@ -20,30 +20,6 @@ using cstring = const char *;
 class wordScreensaver{
 
 private:
-    vectors words;
-    std::string word = "";
-    cstring filename = "words.txt";
-    std::ifstream file;
-    int randomBuffer = 0;
-    string past = "";
-    int fontsize = 100;
-
-    void fillwords();
-
-    void setfontsize(int fontsize);
-
-    void setConsoleFullscreen();
-  
-
-    void greet();
-
-    void setSplitLogic(string current, char outputWord[]);
-
-    int sleepLoopExited(int n);
-    
-    void printBuffer(int n);
-
-public:
     const cstring COL1 = "\u001b[35m";
     const cstring COL2 = "\u001b[32m";
     const cstring COL3 = "\u001b[34m";
@@ -65,10 +41,34 @@ public:
     const int PAD_XXS = 10;
     const int PAD_XXXS = 9;
     const int PAD_XXXXS = 6;
+
+    vectors words;
+    std::string word = "";
+    cstring filename = "words.txt";
+    std::ifstream file;
+    int randomBuffer = 0;
+    string past = "";
+    int fontsize = 100;
+
+    void fillwords();
+
+    void setfontsize(int fontsize);
+
+    void setConsoleFullscreen();
+  
+    void greet();
+
+    void setSplitLogic(string current, char outputWord[]);
+
+    int sleepLoopExited(int n);
     
-    wordScreensaver(int fontSize, cstring filename);
+    void printBuffer(int n);
 
     void setFilename(cstring filename);
+
+public:
+
+    wordScreensaver(int fontSize, cstring filename);
     
     cstring getFilename();
 

@@ -4,6 +4,8 @@
 
 void wordScreensaver::fillwords(){
     file.open(filename);
+    if (file.fail())
+        return;
     while (std::getline(file, word))
         words.push_back(word);
 }
@@ -258,7 +260,11 @@ void wordScreensaver::printBuffer(int n){
 
 wordScreensaver::wordScreensaver(int fontSize, cstring filename){
     setFilename(filename);
-    setfontsize(fontSize);
+    if (fontSize > 0){
+        setfontsize(fontSize);
+    } else {
+        throw std::logic_error("Cannot use fontsize smaller than size 0");
+    }
 }
 
 void wordScreensaver::setFilename(cstring filename){
@@ -276,7 +282,7 @@ int wordScreensaver::run(){
     fillwords();
 
     // error out if there's no second word to switch to
-    if (words.size() < 2){
+    if (words.size() < 2 || file.fail()){
         std::cout << "ERROR: NOT ENOUGH WORDS IN DATABASE"
                 << "\n";
 

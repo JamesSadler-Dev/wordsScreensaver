@@ -44,3 +44,14 @@ Right click `install` on randomwordscreensaver.scr<br><br>
 Move your expected words file to `C:\windows\system32` to finish installation, this filename parameter should match the filename you have compiled your screensaver with.
 </li>
 </ol>
+<hr><b>
+Public API:</b>
+<ol>
+<li>
+    constructor: <code>wordsScreensaver(fontsize,filename)</code>
+</li><br>
+<li> <code>getFilename()</code> getter for filename of a screensaver.
+</li><br>
+<li>
+    <code>wordsScreensaver.run()</code> this should be called on your wordscreensaver object to run once everything has been constructed and is ready.
+</li>
