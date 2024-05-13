@@ -1,7 +1,6 @@
 #include "randomwords.hh"
 
 
-
 void wordScreensaver::fillwords(){
     file.open(filename);
 
@@ -292,7 +291,6 @@ int wordScreensaver::run(){
 
     // screensaver loop
     while (true){
-        // these prevent us from having to recalculate in the loop needlessly
         int randomIndex = rand() % words.size();
         string current = words[randomIndex];
 
@@ -308,8 +306,7 @@ int wordScreensaver::run(){
 
         char outputWord[100];
         setSplitLogic(current, outputWord);
-        // guardian pattern
-        
+
         if (current.length() < 2 || current == "" || outputWord[0] == ' ' || outputWord[1] == ' ')
             continue;
 

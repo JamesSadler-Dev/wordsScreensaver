@@ -8,7 +8,7 @@ Use textformatter.py to format your input tokens, tab separated and newline sepa
 
 textformatter usage:
 ```ps
-python ./scripts/textformatter.py <path to input file> <desired output file>
+python ./scripts/textformatter.py (path to input) (path to output)
 ```
 Raises `IllegalFileInputError` if input file is not found
 </li>
@@ -44,14 +44,27 @@ Right click `install` on randomwordscreensaver.scr<br><br>
 Move your expected words file to `C:\windows\system32` to finish installation, this filename parameter should match the filename you have compiled your screensaver with.
 </li>
 </ol>
-<hr><b>
-Public API:</b>
-<ol>
-<li>
-    constructor: <code>wordsScreensaver(fontsize,filename)</code>
-</li><br>
-<li> <code>getFilename()</code> getter for filename of a screensaver.
-</li><br>
-<li>
-    <code>wordsScreensaver.run()</code> this should be called on your wordscreensaver object to run once everything has been constructed and is ready.
-</li>
+<hr><br><b>
+Public API:</b><br><br>
+
+constructor: `wordsScreensaver(fontsize,filename)`
+
+```cpp
+wordScreensaver screensaver1 = wordScreensaver(100,"foods_list.txt");
+```
+`invalid_argument` error will be thrown if file does not exist or there's not enough words in it.
+
+<br><br>
+`getFilename()` getter for filename of a screensaver.
+```cpp
+    cstring file1 = screensaver1.getFilename()
+    cstring file2 = screensaver2.getFilename()
+```
+intended for use in situations where you would generate multiple screensavers in a program, like within a loop.
+<br><br><br>
+
+`wordsScreensaver.run()` this should be called on your wordscreensaver object to run once everything has been constructed and is ready.
+```cpp
+    screensaver1.run()
+    screensaver2.run()  //these screensavers are synchronous code, so you may run one after another
+```
