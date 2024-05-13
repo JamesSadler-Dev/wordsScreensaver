@@ -2,7 +2,7 @@
 
 
     int main(){
-        wordScreensaver scr = wordScreensaver(130,"words.txt");
+        wordScreensaver scr = wordScreensaver(90,"words.txt");
         scr.run();
         return 0;
     }

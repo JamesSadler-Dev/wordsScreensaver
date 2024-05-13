@@ -7,6 +7,9 @@
 #include <chrono>
 #include <thread>
 #include <windows.h>
+#include <filesystem>
+#include <stdexcept>
+#include <format>
 
 #ifndef RANDOMWORDS_HH
 #define RANDOMWORDS_HH
@@ -68,7 +71,7 @@ private:
 
 public:
 
-    wordScreensaver(int fontSize, cstring filename);
+    wordScreensaver(unsigned int fontSize, cstring filename);
     
     cstring getFilename();
 

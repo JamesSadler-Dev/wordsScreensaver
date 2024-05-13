@@ -9,4 +9,4 @@ add_executable(RandomWordScreensaver randomwordscreensaver.cpp randomwords.cpp r
 target_include_directories(RandomWordScreensaver PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Set C++ standard
-set_property(TARGET RandomWordScreensaver PROPERTY CXX_STANDARD 11)
+set_property(TARGET RandomWordScreensaver PROPERTY CXX_STANDARD 20)

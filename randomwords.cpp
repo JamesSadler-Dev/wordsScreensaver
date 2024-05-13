@@ -4,8 +4,7 @@
 
 void wordScreensaver::fillwords(){
     file.open(filename);
-    if (file.fail())
-        return;
+
     while (std::getline(file, word))
         words.push_back(word);
 }
@@ -258,13 +257,25 @@ void wordScreensaver::printBuffer(int n){
 }
 
 
-wordScreensaver::wordScreensaver(int fontSize, cstring filename){
+wordScreensaver::wordScreensaver(unsigned int fontSize, cstring filename) {
     setFilename(filename);
-    if (fontSize > 0){
-        setfontsize(fontSize);
-    } else {
-        throw std::logic_error("Cannot use fontsize smaller than size 0");
+    setfontsize(fontsize);
+    fillwords();
+
+    try {
+        std::filesystem::path file_path = std::format(".\\{}", filename);
+        if (!std::filesystem::exists(file_path)) 
+            throw std::invalid_argument("File does not exist");
+        
+
+        if (words.size() < 2) 
+            throw std::invalid_argument("Not enough words in database");
+        
     }
+    catch (std::invalid_argument e) {
+        std::cout << "\n\n " << e.what();
+    }
+
 }
 
 void wordScreensaver::setFilename(cstring filename){
@@ -276,23 +287,8 @@ cstring wordScreensaver::getFilename(){
 }
 
 int wordScreensaver::run(){
-    setfontsize(fontsize);
     setConsoleFullscreen();
-    srand(time(0));
-    fillwords();
 
-    // error out if there's no second word to switch to
-    if (words.size() < 2 || file.fail()){
-        std::cout << "ERROR: NOT ENOUGH WORDS IN DATABASE"
-                << "\n";
-
-        for (int i = 3; i > 0; i--){
-            std::cout << "\n"
-                    << "Closing in " << i;
-            std::this_thread::sleep_for(std::chrono::seconds(1));
-        }
-        return 1;
-    }
 
     // screensaver loop
     while (true){
@@ -321,7 +317,7 @@ int wordScreensaver::run(){
         std::this_thread::sleep_for(std::chrono::milliseconds(1));
         randomBuffer = (rand() % 3) + 1;
 
-        printBuffer(9);
+        printBuffer(8);
         std::cout << outputWord;
         printBuffer(randomBuffer);
 
